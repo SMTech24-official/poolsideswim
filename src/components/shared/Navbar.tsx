@@ -15,13 +15,15 @@ const Navbar = () => {
     <div className="bg-primary">
       <div className="container py-5 flex items-center justify-between">
         {/* Logo */}
-        <Image
-          width={118}
-          height={48}
-          src={logo}
-          alt="Logo"
-          className="w-[118px] h-[48px]"
-        />
+        <Link href="/">
+          <Image
+            width={118}
+            height={48}
+            src={logo}
+            alt="Logo"
+            className="w-[118px] h-[48px]"
+          />
+        </Link>
 
         {/* Desktop Navigation Links */}
         <div className="hidden lg:flex items-center gap-10">

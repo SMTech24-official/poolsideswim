@@ -4,7 +4,8 @@ import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import SharedButton from "../shared/SharedButton";
 import Link from "next/link";
-import { Eye, EyeOff } from "lucide-react";
+import { LuEye, LuEyeOff  } from "react-icons/lu";
+
 
 type Inputs = {
   name: string;
@@ -95,9 +96,9 @@ const SignUpPage = () => {
                 onClick={() => setShowPassword(!showPassword)}
               >
                 {showPassword ? (
-                  <Eye className="h-4 w-4" />
+                  <LuEye className="h-4 w-4" />
                 ) : (
-                  <EyeOff className="h-4 w-4" />
+                  <LuEyeOff className="h-4 w-4" />
                 )}
                 <span className="sr-only">
                   {showPassword ? "Hide password" : "Show password"}
@@ -132,9 +133,9 @@ const SignUpPage = () => {
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               >
                 {showConfirmPassword ? (
-                  <Eye className="h-4 w-4" />
+                  <LuEye className="h-4 w-4" />
                 ) : (
-                  <EyeOff className="h-4 w-4" />
+                  <LuEyeOff className="h-4 w-4" />
                 )}
                 <span className="sr-only">
                   {showConfirmPassword ? "Hide password" : "Show password"}
