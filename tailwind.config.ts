@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 export default {
   content: [
@@ -9,8 +10,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: "#015584",
+        secondary: "#0284D0",
+        white: "#ffffff",
+        whiteSmoke: "#f5f5f5",
+        silver: "#D2D2D2",
+        black: "#01161B",
+        carbon: "#333333",
+        gray: "#616161",
+      },
+      fontFamily: {
+        poppins: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],
       },
     },
   },
