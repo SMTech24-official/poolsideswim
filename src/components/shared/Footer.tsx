@@ -8,7 +8,7 @@ import youtubeIcon from "@/assets/footer/youtubeIcon.svg";
 
 const Footer = () => {
   return (
-    <div className="bg-blue">
+    <div className="bg-blue pt-20 mt-[120px]">
       <div className="container text-white">
         <div className="grid xl:flex items-start justify-between pb-6 gap-10 xl:gap-0">
           <div>
@@ -90,7 +90,7 @@ const Footer = () => {
         {/* border */}
         <div className="border "></div>
         {/* copy right */}
-        <p className="text-base leading-[25px] text-center mt-2">
+        <p className="text-base leading-[25px] text-center mt-2 pb-4">
           © 2025 Poolside Swimming. Design by ThemeWarrior
         </p>
       </div>
