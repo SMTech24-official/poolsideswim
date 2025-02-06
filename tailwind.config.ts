@@ -36,6 +36,8 @@ export default {
         black: "#01161B",
         carbon: "#333333",
         gray: "#616161",
+        blue: "#001E2E",
+        yellow: "#F0BC3C",
       },
       fontFamily: {
         poppins: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],
