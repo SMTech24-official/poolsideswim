@@ -16,7 +16,7 @@ export default {
           sm: "2rem",
           md: "3rem",
           lg: "4rem",
-          xl: "6rem",
+          xl: "7rem",
           "2xl": "8rem",
         },
         screens: {
