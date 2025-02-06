@@ -65,7 +65,7 @@ const Footer = () => {
                 Toronto Pan Am Sports Centre, <br /> Toronto, Ontario, Canada
               </p>
             </div>
-            <div>
+            <div className="grid gap-[30px]">
               <h2 className="text-yellow text-lg font-semibold leading-7">
                 Get Started
               </h2>
@@ -75,7 +75,7 @@ const Footer = () => {
                 <p className="text-base leading-[25px]">Career</p>
               </div>
             </div>
-            <div>
+            <div className="grid gap-[30px]">
               <h2 className="text-yellow text-lg font-semibold leading-7">
                 Quick links
               </h2>
