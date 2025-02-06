@@ -100,7 +100,7 @@ const SignUpPage = () => {
             <input
               type="password"
               id="confirmPassword"
-              placeholder="confirm your password"
+              placeholder="Confirm your password"
               className="px-4 py-[13px] bg-whiteSmoke rounded-lg text-gray text-sm h-12"
               {...register("confirmPassword", {
                 required: "Confirm password is required",

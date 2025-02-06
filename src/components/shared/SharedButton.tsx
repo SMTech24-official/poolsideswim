@@ -20,7 +20,7 @@ const SharedButton: React.FC<SharedButtonProps> = ({
       <button
         className={`${classes} py-4 px-6 ${
           isLoading ? "bg-primary py-0" : "bg-primary hover:bg-primary/95"
-        } transition-all duration-300 text-white rounded uppercase text-base font-bold leading-[25px] rounded-full`}
+        } transition-all duration-300 text-white uppercase text-base font-bold leading-[25px] rounded-full`}
         disabled={isLoading}
         onClick={onClick}
         type={type}

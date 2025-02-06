@@ -3,7 +3,7 @@ import React from "react";
 
 const page = () => {
   return (
-    <div className="container">
+    <div className="container mt-20">
       <SignUpPage />
     </div>
   );
