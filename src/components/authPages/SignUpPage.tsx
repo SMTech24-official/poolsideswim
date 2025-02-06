@@ -4,6 +4,7 @@ import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import SharedButton from "../shared/SharedButton";
 import Link from "next/link";
+import { Eye, EyeOff } from "lucide-react";
 
 type Inputs = {
   name: string;
@@ -13,6 +14,8 @@ type Inputs = {
 };
 
 const SignUpPage = () => {
+  const [showPassword, setShowPassword] = React.useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = React.useState(false);
   const {
     register,
     handleSubmit,
@@ -76,16 +79,31 @@ const SignUpPage = () => {
             >
               Password*
             </label>
-            <input
-              type="password"
-              id="password"
-              placeholder="Enter your password"
-              className="px-4 py-[13px] bg-whiteSmoke rounded-lg text-gray text-sm h-12"
-              {...register("password", {
-                required: "Password is required",
-                minLength: 6,
-              })}
-            />
+            <div className="relative">
+              <input
+                type={showPassword ? "text" : "password"}
+                id="password"
+                placeholder="Enter your password"
+                className="w-full px-4 py-[13px] bg-whiteSmoke rounded-lg text-gray text-sm h-12"
+                {...register("password", {
+                  required: "Password is required",
+                  minLength: 6,
+                })}
+              />
+              <button
+                className="absolute right-5 top-1/2 h-4 w-4 -translate-y-1/2 transform"
+                onClick={() => setShowPassword(!showPassword)}
+              >
+                {showPassword ? (
+                  <Eye className="h-4 w-4" />
+                ) : (
+                  <EyeOff className="h-4 w-4" />
+                )}
+                <span className="sr-only">
+                  {showPassword ? "Hide password" : "Show password"}
+                </span>
+              </button>
+            </div>
             {errors.password && (
               <p className="text-red-500 text-sm">{errors.password.message}</p>
             )}
@@ -97,17 +115,32 @@ const SignUpPage = () => {
             >
               Confirm Password*
             </label>
-            <input
-              type="password"
-              id="confirmPassword"
-              placeholder="Confirm your password"
-              className="px-4 py-[13px] bg-whiteSmoke rounded-lg text-gray text-sm h-12"
-              {...register("confirmPassword", {
-                required: "Confirm password is required",
-                validate: (value) =>
-                  value === getValues("password") || "Passwords do not match",
-              })}
-            />
+            <div className="relative">
+              <input
+                type={showConfirmPassword ? "text" : "password"}
+                id="confirmPassword"
+                placeholder="Confirm your password"
+                className="w-full px-4 py-[13px] bg-whiteSmoke rounded-lg text-gray text-sm h-12"
+                {...register("confirmPassword", {
+                  required: "Confirm password is required",
+                  validate: (value) =>
+                    value === getValues("password") || "Passwords do not match",
+                })}
+              />
+              <button
+                className="absolute right-5 top-1/2 h-4 w-4 -translate-y-1/2 transform"
+                onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+              >
+                {showConfirmPassword ? (
+                  <Eye className="h-4 w-4" />
+                ) : (
+                  <EyeOff className="h-4 w-4" />
+                )}
+                <span className="sr-only">
+                  {showConfirmPassword ? "Hide password" : "Show password"}
+                </span>
+              </button>
+            </div>
             {errors.confirmPassword && (
               <p className="text-red-500 text-sm">
                 {errors.confirmPassword.message}
