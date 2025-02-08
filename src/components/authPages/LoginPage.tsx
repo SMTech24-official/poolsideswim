@@ -7,10 +7,8 @@ import Link from "next/link";
 import { LuEye, LuEyeOff } from "react-icons/lu";
 
 type Inputs = {
-  name: string;
   email: string;
   password: string;
-  confirmPassword: string;
 };
 
 const LoginPage = () => {
@@ -87,9 +85,21 @@ const LoginPage = () => {
             {errors.password && (
               <p className="text-red-500 text-sm">{errors.password.message}</p>
             )}
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-3">
+                <input type="checkbox" />
+                <p className="font-medium leading-5 text-gray">Remember Me</p>
+              </div>
+              <Link
+                href="/forgot-password"
+                className="text-base hover:underline text-primary font-medium leading-5 capitalize"
+              >
+                Forgot Password?
+              </Link>
+            </div>
           </div>
         </div>
-        <SharedButton type="submit" classes="w-full" text="sign up" />
+        <SharedButton type="submit" classes="w-full" text="Log in" />
         <p className="font-medium leading-5 text-base text-center">
           Have an account?{" "}
           <Link href="/sign-up" className="text-primary font-bold underline">
