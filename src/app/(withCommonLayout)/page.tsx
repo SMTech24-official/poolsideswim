@@ -2,6 +2,7 @@ import About from "@/components/home/About";
 import Banner from "@/components/home/Banner";
 import OurGallery from "@/components/home/OurGallery";
 import OurPrograms from "@/components/home/OurPrograms";
+import WhyChooseUs from "@/components/home/WhyChooseUs";
 import React from "react";
 
 const page = () => {
@@ -11,6 +12,7 @@ const page = () => {
       <About />
       <OurPrograms />
       <OurGallery />
+      <WhyChooseUs />
     </div>
   );
 };
