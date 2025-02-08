@@ -1,18 +1,38 @@
 "use client";
 
 import Image from "next/image";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import logo from "@/assets/logo.svg";
 import Link from "next/link";
 import SharedButton from "./SharedButton";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
 
+  const handleScroll = () => {
+    if (window.scrollY > 50) {
+      setIsScrolled(true); // Change this value based on when you want the bg to change
+    } else {
+      setIsScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <div className="bg-primary">
+    <div
+      className={`fixed w-full z-10 transition-all duration-300 ease-in-out ${
+        isScrolled ? "bg-primary" : "bg-transparent"
+      }`}
+    >
       <div className="container py-5 flex items-center justify-between">
         {/* Logo */}
         <Link href="/">
