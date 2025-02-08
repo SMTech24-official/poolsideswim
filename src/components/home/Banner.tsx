@@ -14,7 +14,7 @@ const Banner = () => {
         className="w-full h-screen object-cover"
       />
       <div className="container text-white absolute top-0 bottom-0 grid place-content-center">
-        <h1 className="text-[64px] font-bold leading-[76px] mb-4">
+        <h1 className="text-5xl lg:text-[64px] font-bold xl:leading-[76px] mb-4">
           Swim with Confidence, <br /> Learn with Experts
         </h1>
         <p className="text-base leading-[25px] mb-12">

@@ -14,7 +14,7 @@ const Navbar = () => {
 
   const handleScroll = () => {
     if (window.scrollY > 50) {
-      setIsScrolled(true); // Change this value based on when you want the bg to change
+      setIsScrolled(true);
     } else {
       setIsScrolled(false);
     }
