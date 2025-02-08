@@ -21,7 +21,7 @@ const Banner = () => {
           Join our professional swimming lessons designed for all ages and skill
           levels. Safe, fun, and effective learning starts here
         </p>
-        <SharedButton classes="" text="Book Your Lessons" />
+        <SharedButton text="Book Your Lessons" />
       </div>
     </div>
   );

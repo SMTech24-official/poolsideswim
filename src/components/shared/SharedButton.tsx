@@ -2,7 +2,7 @@ import Loading from "./Loading";
 
 interface SharedButtonProps {
   text: string;
-  classes: string;
+  classes?: string;
   isLoading?: boolean;
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
