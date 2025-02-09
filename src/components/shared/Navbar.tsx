@@ -54,7 +54,7 @@ const Navbar = () => {
             Home
           </Link>
           <Link
-            href="/about"
+            href="/about-us"
             className="text-base font-bold leading-[25px] text-white"
           >
             About

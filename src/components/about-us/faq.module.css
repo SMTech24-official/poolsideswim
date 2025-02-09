@@ -1,0 +1,46 @@
+.faqCollapse {
+  background: transparent;
+  border: none;
+  display: grid !important;
+  gap: 24px !important;
+}
+
+.faqCollapse :global(.ant-collapse-item) {
+  border-bottom: 0;
+  margin-bottom: 0;
+}
+
+.faqCollapse :global(.ant-collapse-header) {
+  padding: 24px 48px 24px 0 !important;
+}
+
+.faqCollapse :global(.ant-collapse-content) {
+  background: transparent;
+  border-top: none;
+  color: #616161;
+  line-height: 160%;
+  font-size: 16px;
+}
+
+.faqCollapse :global(.ant-collapse-content-box) {
+  padding: 0 48px 24px 0 !important;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 20px !important;
+  display: grid !important;
+  gap: 24px !important;
+}
+
+.faqPanel :global(.ant-collapse-header) {
+  font-size: 20px;
+  font-weight: 600;
+  color: #333333;
+  line-height: 140%;
+  box-shadow: 0px 1px 10px 0px rgba(0, 0, 0, 0.1);
+  padding: 20px !important;
+}
+
+.expandIcon {
+  font-size: 24px !important;
+  color: #949494;
+  box-shadow: none !important;
+}

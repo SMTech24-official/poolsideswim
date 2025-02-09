@@ -4,7 +4,7 @@ import Image from "next/image";
 import React from "react";
 import quoteImg from "@/assets/testimonial/quote.svg";
 import imgOne from "@/assets/gallery-1.svg";
-import StarRatingComponent from "react-star-rating-component";
+import ReactStars from "react-stars";
 
 const Testimonialcard = () => {
   return (
@@ -33,11 +33,12 @@ const Testimonialcard = () => {
           </h2>
           {/* ratings */}
           <div className="flex items-center justify-center">
-            <StarRatingComponent
-              name="rate1"
-              starCount={5}
+            <ReactStars
+              count={5}
               value={3}
-              editing={false}
+              size={24}
+              color2={"#ffd700"}
+              edit={false}
             />
           </div>
         </div>

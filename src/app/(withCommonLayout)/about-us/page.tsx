@@ -1,4 +1,5 @@
 import BasicSwims from "@/components/about-us/BasicSwims";
+import Faq from "@/components/about-us/Faq";
 import JoinPoolside from "@/components/about-us/JoinPoolside";
 import PoolSideSwim from "@/components/about-us/PoolSideSwim";
 import Team from "@/components/about-us/Team";
@@ -13,6 +14,7 @@ const page = () => {
       <PoolSideSwim />
       <JoinPoolside />
       <Team />
+      <Faq />
     </div>
   );
 };
