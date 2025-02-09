@@ -3,6 +3,7 @@ import Banner from "@/components/home/Banner";
 import Blog from "@/components/home/Blog";
 import OurGallery from "@/components/home/OurGallery";
 import OurPrograms from "@/components/home/OurPrograms";
+import Testimonial from "@/components/home/Testimonial";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import React from "react";
 
@@ -15,6 +16,7 @@ const page = () => {
       <OurGallery />
       <WhyChooseUs />
       <Blog />
+      <Testimonial />
     </div>
   );
 };
