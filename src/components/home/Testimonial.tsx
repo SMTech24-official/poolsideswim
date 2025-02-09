@@ -3,6 +3,8 @@ import React from "react";
 import shapeIcon from "@/assets/shape.svg";
 import SharedButton from "../shared/SharedButton";
 import Testimonialcard from "../allCards/Testimonialcard";
+import Link from "next/link";
+import { TestimonialData } from "../data/TestimonialData";
 
 const Testimonial = () => {
   return (
@@ -30,11 +32,14 @@ const Testimonial = () => {
             Confidence, Mastered New Skills, and Enjoyed Their Journey with Back
             to Basics Swim!
           </p>
-          <SharedButton classes="mt-10 xl:mt-20" text="View All" />
+          <Link href="/testimonial">
+            <SharedButton classes="mt-10 xl:mt-20" text="View All" />
+          </Link>
         </div>
         <div className="grid md:flex items-center gap-36 md:gap-6">
-          <Testimonialcard />
-          <Testimonialcard />
+          {TestimonialData?.slice(0, 2)?.map((review) => (
+            <Testimonialcard key={review?.id} review={review} />
+          ))}
         </div>
       </div>
     </div>

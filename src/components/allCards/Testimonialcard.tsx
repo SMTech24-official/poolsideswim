@@ -5,17 +5,20 @@ import React from "react";
 import quoteImg from "@/assets/testimonial/quote.svg";
 import imgOne from "@/assets/gallery-1.svg";
 import ReactStars from "react-stars";
+import { ReviewType } from "@/app/types/Review";
 
-const Testimonialcard = () => {
+interface ReviewProps {
+  review: ReviewType;
+}
+
+const Testimonialcard = ({ review }: ReviewProps) => {
   return (
-    <div className="shadow-customShadowMd rounded-lg lg:w-[372px] h-[264px] relative">
+    <div className="shadow-customShadowMd rounded-lg lg:w-[372px] h-[264px] relative mx-auto">
       <div className="absolute -top-8 right-0 left-0 bg-white w-[64px] h-[64px] rounded-full place-content-center justify-center flex mx-auto">
         <Image width={32} height={37} src={quoteImg} alt="Quote" className="" />
       </div>
       <p className="text-gray text-base leading-[25px] px-5 py-[67px]">
-        &quot;So glad Back to Basics has a Facebook page! Thanks for teaching my
-        daughter in her early swimming days. She&apos;s now swimming
-        competitively, and I owe her success to your great instruction “
+        {review?.content}
       </p>
       <div className="absolute -bottom-[87px] right-0 left-0 mx-auto flex justify-center">
         <div className="grid justify-center">
@@ -29,13 +32,13 @@ const Testimonialcard = () => {
             />
           </div>
           <h2 className="text-base text-black font-bold leading-5">
-            Liam Carter
+            {review?.name}
           </h2>
           {/* ratings */}
           <div className="flex items-center justify-center">
             <ReactStars
               count={5}
-              value={3}
+              value={review?.ratings}
               size={24}
               color2={"#ffd700"}
               edit={false}
