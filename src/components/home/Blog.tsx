@@ -3,6 +3,8 @@ import React from "react";
 import shapeIcon from "@/assets/shape.svg";
 import SectionHeader from "../shared/SectionHeader";
 import BlogCard from "../allCards/BlogCard";
+import SharedButton from "../shared/SharedButton";
+import Link from "next/link";
 
 const Blog = () => {
   return (
@@ -33,6 +35,10 @@ const Blog = () => {
         <BlogCard />
         <BlogCard />
       </div>
+
+      <Link href="/blog" className="flex justify-center">
+        <SharedButton classes="mt-[48px] w-[185px]" text="See All" />
+      </Link>
     </div>
   );
 };

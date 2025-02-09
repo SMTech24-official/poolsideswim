@@ -72,7 +72,7 @@ const OurPrograms = () => {
               </Link>
             </div>
           </div>
-          {/* card two */}
+          {/* card three */}
           <div className="relative lg:w-[588px]">
             <Image
               width={588}
@@ -93,13 +93,13 @@ const OurPrograms = () => {
                 className="text-primary font-bold leading-[25px] uppercase flex items-center gap-2"
                 href="/"
               >
-                Learn More <FaArrowRight />
+                request a quore <FaArrowRight />
               </Link>
             </div>
           </div>
         </div>
         <div className="grid gap-[168px]">
-          {/* card three */}
+          {/* card two */}
           <div className="relative lg:w-[588px]">
             <Image
               width={588}
@@ -143,9 +143,9 @@ const OurPrograms = () => {
               </p>
               <Link
                 className="text-primary font-bold leading-[25px] uppercase flex items-center gap-2"
-                href="/"
+                href="/contact"
               >
-                Learn More <FaArrowRight />
+                contact us <FaArrowRight />
               </Link>
             </div>
           </div>
