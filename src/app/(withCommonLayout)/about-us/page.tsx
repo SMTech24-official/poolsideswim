@@ -1,4 +1,5 @@
 import BasicSwims from "@/components/about-us/BasicSwims";
+import JoinPoolside from "@/components/about-us/JoinPoolside";
 import PoolSideSwim from "@/components/about-us/PoolSideSwim";
 import SharedBanner from "@/components/shared/SharedBanner";
 import React from "react";
@@ -9,6 +10,7 @@ const page = () => {
       <SharedBanner title="About us" routeName="About" />
       <BasicSwims />
       <PoolSideSwim />
+      <JoinPoolside />
     </div>
   );
 };
