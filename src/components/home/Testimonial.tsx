@@ -6,8 +6,8 @@ import Testimonialcard from "../allCards/Testimonialcard";
 
 const Testimonial = () => {
   return (
-    <div className="bg-gray4">
-      <div className="container flex items-center gap-6 py-20">
+    <div className="bg-gray4 pt-[112px] pb-[167px]">
+      <div className="container grid xl:flex items-center gap-6">
         {/* section header */}
         <div>
           <p className="flex gap-2 items-center">
@@ -30,9 +30,9 @@ const Testimonial = () => {
             Confidence, Mastered New Skills, and Enjoyed Their Journey with Back
             to Basics Swim!
           </p>
-          <SharedButton classes="mt-20" text="View All" />
+          <SharedButton classes="mt-10 xl:mt-20" text="View All" />
         </div>
-        <div className="flex items-center gap-6">
+        <div className="grid md:flex items-center gap-36 md:gap-6">
           <Testimonialcard />
           <Testimonialcard />
         </div>
