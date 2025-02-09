@@ -5,6 +5,7 @@ import SectionHeader from "../shared/SectionHeader";
 import BlogCard from "../allCards/BlogCard";
 import SharedButton from "../shared/SharedButton";
 import Link from "next/link";
+import { BlogData } from "../data/BlogData";
 
 const Blog = () => {
   return (
@@ -31,9 +32,9 @@ const Blog = () => {
 
       {/* Blog Cards */}
       <div className="grid lg:grid-cols-2 xl:grid-cols-3 mt-10 mx-auto justify-center">
-        <BlogCard />
-        <BlogCard />
-        <BlogCard />
+        {BlogData?.slice(0, 3)?.map((blog) => (
+          <BlogCard key={blog?.id} blog={blog} />
+        ))}
       </div>
 
       <Link href="/blog" className="flex justify-center">

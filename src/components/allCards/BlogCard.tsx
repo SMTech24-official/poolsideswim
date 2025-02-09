@@ -3,8 +3,13 @@ import blogImage from "@/assets/blog/blog.svg";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
 import Link from "next/link";
+import { BlogType } from "@/app/types/Blog";
 
-const BlogCard = () => {
+interface BlogDataProps {
+  blog: BlogType;
+}
+
+const BlogCard = ({ blog }: BlogDataProps) => {
   return (
     <div className="md:w-[384px] grid gap-6 mx-auto">
       <div className="grid gap-4">
@@ -15,16 +20,11 @@ const BlogCard = () => {
           alt="Blog Image"
           className="md:w-[384px] md:h-[384px] rounded-lg"
         />
-        <p className="text-base text-gray leading-[25px]">
-          July 01, 2024 No Comments
-        </p>
+        <p className="text-base text-gray leading-[25px]">{blog?.date}</p>
         <h2 className="text-xl font-semibold leading-7 text-black">
-          The Great Debate: Should My Kids Take Swim Lessons in Winter?
+          {blog?.title}
         </h2>
-        <p className="text-gray500 text-base leading-[25px]">
-          Cold Weather, Warm Water – Why Winter Might Be the Best Time for Swim
-          Lessons!
-        </p>
+        <p className="text-gray500 text-base leading-[25px]">{blog?.content}</p>
       </div>
       <Link
         href="/blog"
