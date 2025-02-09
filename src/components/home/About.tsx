@@ -3,6 +3,7 @@ import React from "react";
 import aboutImage from "@/assets/aboutImage.svg";
 import shapeIcon from "@/assets/shape.svg";
 import SharedButton from "../shared/SharedButton";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -40,7 +41,9 @@ const About = () => {
             structured programs cater to all ages and skill levels.
           </p>
         </div>
-        <SharedButton text="learn more" />
+        <Link href="/about">
+          <SharedButton text="learn more" />
+        </Link>
       </div>
     </div>
   );
