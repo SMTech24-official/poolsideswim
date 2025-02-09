@@ -7,6 +7,8 @@ export const metadata: Metadata = {
 };
 
 import { Poppins } from "next/font/google";
+import Footer from "@/components/shared/Footer";
+import Navbar from "@/components/shared/Navbar";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -21,7 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={poppins.variable}>
-      <body>{children}</body>
+      <body>
+        <Navbar />
+        <main>{children}</main>
+        <Footer />
+      </body>
     </html>
   );
 }

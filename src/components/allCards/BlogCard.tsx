@@ -2,6 +2,7 @@ import React from "react";
 import blogImage from "@/assets/blog/blog.svg";
 import Image from "next/image";
 import { FaArrowRight } from "react-icons/fa6";
+import Link from "next/link";
 
 const BlogCard = () => {
   return (
@@ -25,9 +26,12 @@ const BlogCard = () => {
           Lessons!
         </p>
       </div>
-      <h3 className="text-base text-primary font-bold leading-[25px] uppercase flex items-center gap-2">
+      <Link
+        href="/blog"
+        className="text-base text-primary font-bold leading-[25px] uppercase flex items-center gap-2"
+      >
         Read More <FaArrowRight />
-      </h3>
+      </Link>
     </div>
   );
 };
