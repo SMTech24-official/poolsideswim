@@ -43,7 +43,8 @@ export default {
         poppins: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],
       },
       boxShadow: {
-        customShadow: "0px 5px 40px 0px rgba(0, 0, 0, 0.10)",
+        customShadow: "0px 5px 10px 0px rgba(0, 0, 0, 0.10)",
+        customShadowMd: "0px 5px 40px 0px rgba(0, 0, 0, 0.10)",
       },
     },
   },

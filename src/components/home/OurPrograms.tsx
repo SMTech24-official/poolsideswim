@@ -25,7 +25,7 @@ const OurPrograms = () => {
             alt="Weekly Image"
             className="lg:w-[791px] h-[400px] object-cover rounded-lg"
           />
-          <div className="absolute right-6 lg:right-0 -bottom-[128px] lg:-bottom-10 bg-white shadow-customShadow rounded-lg grid gap-3 lg:gap-6 p-8 lg:w-[414px]">
+          <div className="absolute right-6 lg:right-0 -bottom-[128px] lg:-bottom-10 bg-white shadow-customShadowMd rounded-lg grid gap-3 lg:gap-6 p-8 lg:w-[414px]">
             <h2 className="text-[32px] font-bold leading-[38px] text-black">
               Weekly Swimming Lessons
             </h2>
@@ -52,7 +52,7 @@ const OurPrograms = () => {
               alt="Intensive Swim Lessons"
               className="lg:w-[588px] lg:h-[400px] rounded-lg"
             />
-            <div className="absolute right-6 -bottom-[128px] bg-white shadow-customShadow rounded-lg grid gap-3 lg:gap-6 p-8 lg:w-[414px]">
+            <div className="absolute right-6 -bottom-[128px] bg-white shadow-customShadowMd rounded-lg grid gap-3 lg:gap-6 p-8 lg:w-[414px]">
               <h2 className="text-[32px] font-bold leading-[38px] text-black">
                 Intensive Swim Lessons
               </h2>
@@ -76,7 +76,7 @@ const OurPrograms = () => {
               alt="Intensive Swim Lessons"
               className="lg:w-[588px] lg:h-[400px] rounded-lg"
             />
-            <div className="absolute right-6 -bottom-[128px] bg-white shadow-customShadow rounded-lg grid gap-3 lg:gap-6 p-8 lg:w-[414px]">
+            <div className="absolute right-6 -bottom-[128px] bg-white shadow-customShadowMd rounded-lg grid gap-3 lg:gap-6 p-8 lg:w-[414px]">
               <h2 className="text-[32px] font-bold leading-[38px] text-black">
                 Intensive Swim Lessons
               </h2>
@@ -102,7 +102,7 @@ const OurPrograms = () => {
               alt="Intensive Swim Lessons"
               className="lg:w-[588px] lg:h-[400px] rounded-lg"
             />
-            <div className="absolute right-6 -bottom-[128px] bg-white shadow-customShadow rounded-lg grid gap-3 lg:gap-6 p-8 lg:w-[414px]">
+            <div className="absolute right-6 -bottom-[128px] bg-white shadow-customShadowMd rounded-lg grid gap-3 lg:gap-6 p-8 lg:w-[414px]">
               <h2 className="text-[32px] font-bold leading-[38px] text-black">
                 Intensive Swim Lessons
               </h2>
@@ -126,7 +126,7 @@ const OurPrograms = () => {
               alt="Intensive Swim Lessons"
               className="lg:w-[588px] lg:h-[400px] rounded-lg"
             />
-            <div className="absolute right-6 -bottom-[128px] bg-white shadow-customShadow rounded-lg grid gap-3 lg:gap-6 p-8 lg:w-[414px]">
+            <div className="absolute right-6 -bottom-[128px] bg-white shadow-customShadowMd rounded-lg grid gap-3 lg:gap-6 p-8 lg:w-[414px]">
               <h2 className="text-[32px] font-bold leading-[38px] text-black">
                 Intensive Swim Lessons
               </h2>
