@@ -7,6 +7,8 @@ import Image from "next/image";
 const OurGallery = () => {
   return (
     <div className="container mt-[120px] lg:mt-[149px]">
+      {/* section header */}
+
       <SectionHeader
         classes="text-center"
         title="Our gallery"

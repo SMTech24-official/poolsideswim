@@ -36,6 +36,7 @@ export default {
         black: "#01161B",
         carbon: "#333333",
         gray: "#616161",
+        gray500: "#667085",
         blue: "#001E2E",
         yellow: "#F0BC3C",
       },

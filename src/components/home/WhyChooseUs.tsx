@@ -6,6 +6,8 @@ import badgeIcon from "@/assets/why-choose-us/badge.svg";
 const WhyChooseUs = () => {
   return (
     <div className="container">
+      {/* section header */}
+
       <SectionHeader
         classes="text-center"
         title="Why Choose Us"

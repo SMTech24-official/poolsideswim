@@ -13,10 +13,13 @@ const OurPrograms = () => {
   return (
     <div className="container grid gap-[168px] lg:gap-20">
       <div className="grid xl:flex items-center gap-6">
+        {/* section title */}
+
         <SectionHeader
           title="Our Programs"
           subTitle="Tailored swim lessons and leadership courses for all ages and skill levels."
         />
+        {/* main card header */}
         <div className="relative lg:w-[791px] ">
           <Image
             width={791}
@@ -44,6 +47,7 @@ const OurPrograms = () => {
       </div>
       <div className="grid xl:grid-cols-2 gap-[168px] lg:gap-6 justify-center">
         <div className="grid gap-[168px]">
+          {/* card one */}
           <div className="relative lg:w-[588px]">
             <Image
               width={588}
@@ -68,6 +72,7 @@ const OurPrograms = () => {
               </Link>
             </div>
           </div>
+          {/* card two */}
           <div className="relative lg:w-[588px]">
             <Image
               width={588}
@@ -94,6 +99,7 @@ const OurPrograms = () => {
           </div>
         </div>
         <div className="grid gap-[168px]">
+          {/* card three */}
           <div className="relative lg:w-[588px]">
             <Image
               width={588}
@@ -118,6 +124,7 @@ const OurPrograms = () => {
               </Link>
             </div>
           </div>
+          {/* card four */}
           <div className="relative lg:w-[588px]">
             <Image
               width={588}
