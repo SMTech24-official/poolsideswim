@@ -6,6 +6,7 @@ import locationIcon from "@/assets/contact/location-icon.svg";
 import phoneIcon from "@/assets/contact/phone-icon.svg";
 import emailIcon from "@/assets/contact/email-icon.svg";
 import { SubmitHandler, useForm } from "react-hook-form";
+import SharedButton from "../shared/SharedButton";
 
 interface Inputs {
   firstName: string;
@@ -61,7 +62,12 @@ const ContactPage = () => {
         <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4">
           <div className="md:flex items-center gap-6">
             <div className="grid gap-2 md:w-[354px]">
-              <label htmlFor="firstName">First Name*</label>
+              <label
+                htmlFor="firstName"
+                className="text-base text-carbon font-medium leading-5 capitalize"
+              >
+                First Name*
+              </label>
               <input
                 type="text"
                 id="firstName"
@@ -71,7 +77,12 @@ const ContactPage = () => {
               />
             </div>
             <div className="grid gap-2 md:w-[354px]">
-              <label htmlFor="lastName">Last Name*</label>
+              <label
+                htmlFor="lastName"
+                className="text-base text-carbon font-medium leading-5 capitalize"
+              >
+                Last Name*
+              </label>
               <input
                 type="text"
                 id="lastName"
@@ -83,7 +94,12 @@ const ContactPage = () => {
           </div>
           <div className="md:flex items-center gap-6">
             <div className="grid gap-2 md:w-[354px]">
-              <label htmlFor="phone">Phone*</label>
+              <label
+                htmlFor="phone"
+                className="text-base text-carbon font-medium leading-5 capitalize"
+              >
+                Phone*
+              </label>
               <input
                 type="number"
                 id="phone"
@@ -93,7 +109,12 @@ const ContactPage = () => {
               />
             </div>
             <div className="grid gap-2 md:w-[354px]">
-              <label htmlFor="email">Email address*</label>
+              <label
+                htmlFor="email"
+                className="text-base text-carbon font-medium leading-5 capitalize"
+              >
+                Email address*
+              </label>
               <input
                 type="email"
                 id="email"
@@ -104,13 +125,21 @@ const ContactPage = () => {
             </div>
           </div>
           <div className="grid gap-2 w-full">
-            <label htmlFor="message">Message*</label>
+            <label
+              htmlFor="message"
+              className="text-base text-carbon font-medium leading-5 capitalize"
+            >
+              Message*
+            </label>
             <textarea
               id="message"
               {...register("message", { required: true })}
               className="px-4 py-5 text-gray text-sm leading-[16px] bg-whiteSmoke rounded-lg h-[244px]"
               placeholder="Write message"
             />
+          </div>
+          <div className="flex justify-end mt-4">
+            <SharedButton text="Submit" type="submit" />
           </div>
         </form>
       </div>

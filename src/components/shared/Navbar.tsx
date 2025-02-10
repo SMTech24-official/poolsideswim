@@ -136,7 +136,7 @@ const Navbar = () => {
           Home
         </Link>
         <Link
-          href="/about"
+          href="/about-us"
           className="block py-2 text-base font-bold leading-[25px]"
           onClick={() => setIsMenuOpen(false)}
         >
@@ -171,7 +171,7 @@ const Navbar = () => {
           Career
         </Link>
         <Link
-          href="/contact"
+          href="/contact-us"
           className="block py-2 text-base font-bold leading-[25px]"
           onClick={() => setIsMenuOpen(false)}
         >

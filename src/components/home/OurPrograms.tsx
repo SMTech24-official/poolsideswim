@@ -83,15 +83,14 @@ const OurPrograms = () => {
             />
             <div className="absolute right-6 -bottom-[128px] bg-white shadow-customShadowMd rounded-lg grid gap-3 lg:gap-6 p-8 lg:w-[414px]">
               <h2 className="text-[32px] font-bold leading-[38px] text-black">
-                Intensive Swim Lessons
+                Lifeguarding Services
               </h2>
               <p className="text-gray leading-[25px]">
-                Two-week intensive sessions with six classes for fast, focused
-                progress.
+                Hire our certified lifeguards for safety and peace of mind.
               </p>
               <Link
                 className="text-primary font-bold leading-[25px] uppercase flex items-center gap-2"
-                href="/"
+                href="/request-a-quoore"
               >
                 request a quore <FaArrowRight />
               </Link>
@@ -110,11 +109,10 @@ const OurPrograms = () => {
             />
             <div className="absolute right-6 -bottom-[128px] bg-white shadow-customShadowMd rounded-lg grid gap-3 lg:gap-6 p-8 lg:w-[414px]">
               <h2 className="text-[32px] font-bold leading-[38px] text-black">
-                Intensive Swim Lessons
+                Backyard Swim Lessons
               </h2>
               <p className="text-gray leading-[25px]">
-                Two-week intensive sessions with six classes for fast, focused
-                progress.
+                We bring swim lessons to your home or backyard pool.
               </p>
               <Link
                 className="text-primary font-bold leading-[25px] uppercase flex items-center gap-2"
@@ -135,11 +133,11 @@ const OurPrograms = () => {
             />
             <div className="absolute right-6 -bottom-[128px] bg-white shadow-customShadowMd rounded-lg grid gap-3 lg:gap-6 p-8 lg:w-[414px]">
               <h2 className="text-[32px] font-bold leading-[38px] text-black">
-                Intensive Swim Lessons
+                Leadership Courses
               </h2>
               <p className="text-gray leading-[25px]">
-                Two-week intensive sessions with six classes for fast, focused
-                progress.
+                Our Aquatic Leadership programs help you become a lifeguard or
+                instructor.
               </p>
               <Link
                 className="text-primary font-bold leading-[25px] uppercase flex items-center gap-2"
