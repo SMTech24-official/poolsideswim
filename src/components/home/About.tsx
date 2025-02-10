@@ -41,7 +41,7 @@ const About = () => {
             structured programs cater to all ages and skill levels.
           </p>
         </div>
-        <Link href="/about">
+        <Link href="/about-us">
           <SharedButton text="learn more" />
         </Link>
       </div>
