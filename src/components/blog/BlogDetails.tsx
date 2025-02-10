@@ -23,6 +23,8 @@ const BlogDetails = () => {
         <Image width={24} height={24} src={dateIcon} alt="Date Icon" />
         <p className="text-base leading-[25px] text-gray">July 01, 2024</p>
       </div>
+      {/* blog content */}
+      <div></div>
     </div>
   );
 };

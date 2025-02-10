@@ -84,7 +84,7 @@ const Navbar = () => {
             Career
           </Link>
           <Link
-            href="/contact"
+            href="/contact-us"
             className="text-base font-bold leading-[25px] text-white"
           >
             Contact
