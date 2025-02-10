@@ -2,6 +2,7 @@
 
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
+import SharedButton from "./shared/SharedButton";
 
 interface Inputs {
   name: string;
@@ -148,6 +149,9 @@ const RequestAQuooreForm = () => {
             className="px-4 py-5 text-gray bg-gray4 rounded-lg"
             {...register("participants", { required: true })}
           />
+        </div>
+        <div className="flex justify-center mt-4">
+          <SharedButton type="submit" text="submit" />
         </div>
       </form>
     </div>
