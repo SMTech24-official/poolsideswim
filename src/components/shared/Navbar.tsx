@@ -77,12 +77,12 @@ const Navbar = () => {
           >
             Blog
           </Link> */}
-          <Link
+          {/* <Link
             href="/career"
             className="text-base font-bold leading-[25px] text-white"
           >
             Career
-          </Link>
+          </Link> */}
           <Link
             href="/contact-us"
             className="text-base font-bold leading-[25px] text-white"
@@ -163,13 +163,13 @@ const Navbar = () => {
         >
           Blog
         </Link> */}
-        <Link
+        {/* <Link
           href="/career"
           className="block py-2 text-base font-bold leading-[25px]"
           onClick={() => setIsMenuOpen(false)}
         >
           Career
-        </Link>
+        </Link> */}
         <Link
           href="/contact-us"
           className="block py-2 text-base font-bold leading-[25px]"
