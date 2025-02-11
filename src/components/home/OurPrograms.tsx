@@ -140,7 +140,7 @@ const OurPrograms = () => {
               </p>
               <Link
                 className="text-primary font-bold leading-[25px] uppercase flex items-center gap-2"
-                href="/contact"
+                href="/contact-us"
               >
                 contact us <FaArrowRight />
               </Link>

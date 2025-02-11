@@ -15,7 +15,7 @@ const SharedBanner = ({
     <div className="relative">
       <Image
         width={1000}
-        height={100}
+        height={1000}
         src={bannerImg}
         alt="Banner"
         className="w-full h-[450px] object-cover"
