@@ -1,16 +1,16 @@
 import React from "react";
 import SectionHeader from "../shared/SectionHeader";
-import intensiveImg from "@/assets/about/intensive.svg";
-import backyardImg from "@/assets/about/backyard.svg";
-import lifeguardImg from "@/assets/about/lifeguard.svg";
-import leadershipImg from "@/assets/about/leadership.svg";
+import intensiveImg from "@/assets/about/weekly.png";
+import backyardImg from "@/assets/about/backyard.png";
+import lifeguardImg from "@/assets/about/lifeguard.png";
+import leadershipImg from "@/assets/about/leadership.png";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
 
 const OurPrograms = () => {
   return (
-    <div className="container grid gap-[168px] lg:gap-20">
+    <div className="container grid gap-[168px] lg:gap-20 mb-[128px]">
       {/* section title */}
 
       <SectionHeader
