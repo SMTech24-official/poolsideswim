@@ -1,5 +1,5 @@
 import React from "react";
-import bannerImg from "@/assets/banner.svg";
+import bannerImg from "@/assets/banner.png";
 import Image from "next/image";
 import SharedButton from "../shared/SharedButton";
 

@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import aboutImage from "@/assets/about/aboutImage2.svg";
-import shapeIcon from "@/assets/shape.svg";
+import aboutImage from "@/assets/about/aboutImage2.png";
+import shapeIcon from "@/assets/shape.png";
 
 const BasicSwims = () => {
   return (

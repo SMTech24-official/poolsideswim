@@ -1,6 +1,6 @@
 import Image from "next/image";
 import React from "react";
-import bannerImg from "@/assets/about/banner.svg";
+import bannerImg from "@/assets/about/banner.png";
 import { IoIosArrowForward } from "react-icons/io";
 import Link from "next/link";
 

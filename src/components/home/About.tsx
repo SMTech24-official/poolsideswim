@@ -1,7 +1,7 @@
 import Image from "next/image";
 import React from "react";
-import aboutImage from "@/assets/aboutImage.svg";
-import shapeIcon from "@/assets/shape.svg";
+import aboutImage from "@/assets/aboutImage.png";
+import shapeIcon from "@/assets/shape.png";
 import SharedButton from "../shared/SharedButton";
 import Link from "next/link";
 
