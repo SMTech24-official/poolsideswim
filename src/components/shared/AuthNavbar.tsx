@@ -45,12 +45,12 @@ const AuthNavbar = () => {
           >
             Programs
           </Link>
-          <Link
+          {/* <Link
             href="/pricing"
             className="text-base font-bold leading-[25px] text-white"
           >
             Pricing
-          </Link>
+          </Link> */}
           {/* <Link
             href="/blog"
             className="text-base font-bold leading-[25px] text-white"
@@ -129,13 +129,13 @@ const AuthNavbar = () => {
         >
           Programs
         </Link>
-        <Link
+        {/* <Link
           href="/pricing"
           className="block py-2 text-base font-bold leading-[25px]"
           onClick={() => setIsMenuOpen(false)}
         >
           Pricing
-        </Link>
+        </Link> */}
         {/* <Link
           href="/blog"
           className="block py-2 text-base font-bold leading-[25px]"
