@@ -1,7 +1,10 @@
 "use client";
 
-import React from "react";
+import { Elements } from "@stripe/react-stripe-js";
+import { loadStripe } from "@stripe/stripe-js";
 import { SubmitHandler, useForm } from "react-hook-form";
+import PaymentMethod from "./PaymentMethod";
+import SharedButton from "../shared/SharedButton";
 
 interface Inputs {
   phone: string;
@@ -15,9 +18,24 @@ interface Inputs {
   zipCode: string;
 }
 
+const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
+
 const CheckoutPage = () => {
   const { register, handleSubmit } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    console.log(data);
+  };
+
+  const options = {
+    mode: "payment" as const,
+    amount: 1099,
+    currency: "usd",
+    // Fully customizable with appearance API.
+    appearance: {
+      /*...*/
+    },
+  };
+
   return (
     <div className="container">
       <div className="grid gap-[7px]">
@@ -27,7 +45,7 @@ const CheckoutPage = () => {
         <div className="border-b-[1px] border-[#DBDBDB]"></div>
       </div>
       <form className="mt-10" onSubmit={handleSubmit(onSubmit)}>
-        <div className="flex items-center gap-6">
+        <div className="xl:flex items-center gap-6">
           <div className="grid gap-6">
             <h2 className="text-black text-[32px] font-bold leading-[38px]">
               Contact
@@ -37,7 +55,7 @@ const CheckoutPage = () => {
               Lessons name:{" "}
               <span className="text-primary">Baby & Toddler Classes</span>
             </p>
-            <div className="flex items-center gap-4 w-full">
+            <div className="md:flex items-center gap-4 w-full">
               <div className="grid gap-2">
                 <label
                   htmlFor="phone"
@@ -88,7 +106,7 @@ const CheckoutPage = () => {
                     <option value="united states">United States</option>
                   </select>
                 </div>
-                <div className="flex items-center gap-4 w-full">
+                <div className="md:flex items-center gap-4 w-full">
                   <div className="grid gap-2">
                     <label
                       htmlFor="firstName"
@@ -135,7 +153,7 @@ const CheckoutPage = () => {
                       {...register("address", { required: true })}
                       className="px-4 py-[17px] text-gray bg-gray4 rounded-lg"
                     />
-                    <div className="flex gap-4">
+                    <div className="grid md:flex gap-4">
                       <input
                         id="city"
                         type="text"
@@ -177,9 +195,18 @@ const CheckoutPage = () => {
               </div>
             </div>
           </div>
+          {/* payment method */}
+          <div className="w-full">
+            <Elements stripe={stripePromise} options={options}>
+              <PaymentMethod />
+            </Elements>
+            <SharedButton
+              type="submit"
+              text="Pay"
+              classes="w-full rounded-lg mt-4"
+            />
+          </div>
         </div>
-        {/* payment method */}
-        <div></div>
       </form>
     </div>
   );
