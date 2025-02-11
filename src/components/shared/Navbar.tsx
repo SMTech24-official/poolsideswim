@@ -71,12 +71,12 @@ const Navbar = () => {
           >
             Pricing
           </Link>
-          <Link
+          {/* <Link
             href="/blog"
             className="text-base font-bold leading-[25px] text-white"
           >
             Blog
-          </Link>
+          </Link> */}
           <Link
             href="/career"
             className="text-base font-bold leading-[25px] text-white"
@@ -156,13 +156,13 @@ const Navbar = () => {
         >
           Pricing
         </Link>
-        <Link
+        {/* <Link
           href="/blog"
           className="block py-2 text-base font-bold leading-[25px]"
           onClick={() => setIsMenuOpen(false)}
         >
           Blog
-        </Link>
+        </Link> */}
         <Link
           href="/career"
           className="block py-2 text-base font-bold leading-[25px]"

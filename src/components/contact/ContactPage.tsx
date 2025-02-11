@@ -39,21 +39,19 @@ const ContactPage = () => {
                 src={locationIcon}
                 alt="Location Icon"
               />
-              <p className="text-2xl leading-[28px] text-gray">
-                Toronto, Ontario, Canada
-              </p>
+              <p className="text-2xl leading-[28px] text-gray">Oakville, ON</p>
             </div>
             <div className="flex items-center gap-4">
               <Image width={24} height={24} src={phoneIcon} alt="Phone Icon" />
               <p className="text-2xl leading-[28px] text-gray">
-                +1 416-555-1234
+                +1 905 582 7702
               </p>
             </div>
             <div className="flex items-center gap-4">
               <Image width={24} height={24} src={emailIcon} alt="Email Icon" />
               <p className="text-2xl leading-[28px] text-gray">
                 {" "}
-                info@yourbusiness.ca
+                poolsideswimmng@gmail.com
               </p>
             </div>
           </div>
