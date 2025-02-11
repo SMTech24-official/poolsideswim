@@ -1,9 +1,9 @@
 import React from "react";
 import SectionHeader from "../shared/SectionHeader";
-import ProgramCard from "../allCards/ProgramCard";
+import ServiceCard from "../allCards/ServiceCard";
 import { programData } from "../data/ProgramData";
 
-const ProgramCategories = () => {
+const ServicesCategories = () => {
   return (
     <div className="container">
       <SectionHeader
@@ -13,11 +13,11 @@ const ProgramCategories = () => {
       />
       <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-x-6 gap-y-[150px] lg:gap-y-[197px] mt-10 mx-auto">
         {programData?.map((program, index) => (
-          <ProgramCard key={index} program={program} />
+          <ServiceCard key={index} program={program} />
         ))}
       </div>
     </div>
   );
 };
 
-export default ProgramCategories;
+export default ServicesCategories;

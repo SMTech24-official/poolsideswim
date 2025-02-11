@@ -8,7 +8,7 @@ interface ProgramProps {
   program: ProgramType;
 }
 
-const ProgramCard = ({ program }: ProgramProps) => {
+const ServiceCard = ({ program }: ProgramProps) => {
   return (
     <div className="lg:w-[384px] relative mx-auto">
       <Image
@@ -35,4 +35,4 @@ const ProgramCard = ({ program }: ProgramProps) => {
   );
 };
 
-export default ProgramCard;
+export default ServiceCard;

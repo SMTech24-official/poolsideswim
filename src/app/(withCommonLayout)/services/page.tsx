@@ -1,5 +1,5 @@
 import Testimonial from "@/components/home/Testimonial";
-import ProgramCategories from "@/components/programs/ProgramCategories";
+import ProgramCategories from "@/components/services/ServicesCategories";
 import SharedBanner from "@/components/shared/SharedBanner";
 import React from "react";
 
