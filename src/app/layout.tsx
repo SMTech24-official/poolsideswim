@@ -8,6 +8,7 @@ export const metadata: Metadata = {
 
 import { Poppins } from "next/font/google";
 import ReduxProvider from "@/redux/ReduxProvider";
+import { Toaster } from "sonner";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="en" className={poppins.variable}>
       <body>
         <ReduxProvider>{children}</ReduxProvider>
+        <Toaster />
       </body>
     </html>
   );

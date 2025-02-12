@@ -17,7 +17,7 @@ const About = () => {
       />
       <div className="grid gap-6 md:gap-12">
         <div className="grid gap-4">
-          <p className="flex gap-2 items-center">
+          <div className="flex gap-2 items-center">
             <Image
               width={20}
               height={10}
@@ -28,7 +28,7 @@ const About = () => {
             <h2 className="text-primary font-bold text-base leading-5 uppercase">
               About
             </h2>
-          </p>
+          </div>
           <h2 className="text-[40px] font-bold leading-[48px]">
             About Back to Basics Swim
           </h2>

@@ -4,13 +4,11 @@ import React, { ReactNode } from "react";
 
 const layout = ({ children }: { children: ReactNode }) => {
   return (
-    <div>
       <body>
         <Navbar />
         <main>{children}</main>
         <Footer />
       </body>
-    </div>
   );
 };
 

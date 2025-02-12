@@ -18,7 +18,7 @@ const Testimonial = () => {
       <div className="container grid xl:flex items-center gap-6">
         {/* section header */}
         <div>
-          <p className="flex gap-2 items-center">
+          <div className="flex gap-2 items-center">
             <Image
               width={20}
               height={10}
@@ -29,7 +29,7 @@ const Testimonial = () => {
             <h2 className="text-primary font-bold text-base leading-5 uppercase">
               Testimonial
             </h2>
-          </p>
+          </div>
           <h2 className="text-black text-[40px] font-bold leading-[48px] py-4">
             What People Says?
           </h2>
