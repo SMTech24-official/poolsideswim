@@ -30,6 +30,7 @@ export const userSlice = createSlice({
       state.user = null;
       if (typeof window !== "undefined") {
         localStorage.removeItem("accessToken");
+        localStorage.removeItem("email");
         Cookies.remove("accessToken");
       }
     },

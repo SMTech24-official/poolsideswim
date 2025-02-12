@@ -5,11 +5,23 @@ import React, { useState } from "react";
 import logo from "@/assets/logo.svg";
 import Link from "next/link";
 import SharedButton from "./SharedButton";
+import { useDispatch, useSelector } from "react-redux";
+import { RootState } from "@/redux/rootReducer";
+import { FaChevronDown } from "react-icons/fa6";
+import { removeUser } from "@/redux/slice/userSlice";
 
 const AuthNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const [isDropdownOpen, setDropdownOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
+  const user = useSelector((state: RootState) => state?.user);
+  const isLoggenIn = !!user?.user?.id;
+  const dispatch = useDispatch();
+
+  const handleLogout = () => {
+    dispatch(removeUser()); // Dispatch logout action
+    setDropdownOpen(false); // Close dropdown
+  };
 
   return (
     <div className="sticky top-0 w-full z-10 bg-primary">
@@ -93,12 +105,41 @@ const AuthNavbar = () => {
 
         {/* Login Button (always visible) */}
         <div>
-          <Link href="/login">
-            <SharedButton
-              classes="bg-white hover:bg-white/95 !text-black py-[9px]"
-              text="Log in"
-            />
-          </Link>
+          {isLoggenIn ? (
+            <div className="flex items-center gap-4">
+              {/* Display user name */}
+              <p className="text-white">
+                {user?.user?.firstName} {user?.user?.lastName}
+              </p>
+
+              {/* Icon for dropdown */}
+              <div className="relative">
+                <FaChevronDown
+                  className="text-white cursor-pointer"
+                  onClick={() => setDropdownOpen(!isDropdownOpen)}
+                />
+                {isDropdownOpen && (
+                  <div className="absolute right-0 bg-white text-black py-2 px-4 mt-2 rounded-md shadow-lg">
+                    {/* Logout button */}
+                    <button
+                      onClick={handleLogout}
+                      className="w-full text-left px-4 py-2 text-sm font-medium hover:bg-gray-200 rounded-md"
+                    >
+                      Logout
+                    </button>
+                  </div>
+                )}
+              </div>
+            </div>
+          ) : (
+            // If not logged in, show login button
+            <Link href="/login">
+              <SharedButton
+                classes="bg-white hover:bg-white/95 !text-black py-[9px]"
+                text="Log in"
+              />
+            </Link>
+          )}
         </div>
       </div>
 
