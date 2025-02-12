@@ -10,29 +10,33 @@ const { Panel } = Collapse;
 
 const faqs = [
   {
-    question: "What age can my child start swimming lessons?",
-    answer:
-      "Your child can start swimming lessons as early as six months old. Our classes focus on water safety and building confidence. As your child grows, we offer age-appropriate lessons to develop their skills. Each lesson is designed to help them progress at their own pace.",
-  },
-  {
     question: "What time of year can I enroll my child in swim lessons?",
     answer:
-      "We offer swimming lessons year-round in our temperature-controlled indoor pools. You can enroll your child at any time, and our flexible scheduling system allows you to choose from morning, afternoon, and evening sessions to best fit your schedule.",
+      "Poolside Swimming is a season company working only in the summer month however, you can book your spot any in advance any time of year.",
   },
   {
     question: "How long are swim lessons?",
     answer:
-      "Our standard swim lessons are 30 minutes long, which we've found to be the optimal duration for maintaining children's attention and energy levels. We offer both group and private lessons, with programs typically running in 8-week sessions.",
+      "Classes are 30 minutes in duration per day.  Bronze Medallion and Bronze Cross classes are 90 minutes in duration per day.",
   },
   {
     question: "What training do your instructors receive?",
-    answer:
-      "All our instructors are certified lifeguards and undergo comprehensive training in our teaching methodology. They are required to maintain current CPR and First Aid certifications, and participate in regular professional development to stay updated on the latest teaching techniques.",
+    answer: "All instructors are certified by the Lifesaving Society",
   },
   {
     question: "Will my child have the same instructor for every lesson?",
     answer:
-      "We strive to maintain consistency by assigning the same instructor to your child's lessons whenever possible. This helps build trust and familiarity, which are essential for effective learning. However, all our instructors are trained in our standardized teaching methods.",
+      "Yes your child will have the same instructor every lesson.   However, in rare situations you may have a different instructor",
+  },
+  {
+    question: "What if it rains?",
+    answer:
+      "The Instructor is the one who determine a 'rain day' and if the class will be rescheduled, not the client. Rain days will be made up at at the earliest convenience of the instructor",
+  },
+  {
+    question: "Does Poolside Swimming run classes on the holidays?",
+    answer:
+      "Poolside Swimming will conduct classes on the Civic Holidays of July and August.  If the client cancels or misses the class it is not the responsibility of Poolside Swimming to make up the missed class.",
   },
 ];
 
