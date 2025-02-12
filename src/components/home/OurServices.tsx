@@ -52,17 +52,18 @@ const OurServices = () => {
           />
           <div className="absolute right-6 -bottom-[128px] bg-white shadow-customShadowMd rounded-lg grid gap-3 lg:gap-6 p-8 lg:w-[414px]">
             <h2 className="text-[32px] font-bold leading-[38px] text-black">
-              Leadership Courses
+              Adult Classes
             </h2>
             <p className="text-gray leading-[25px]">
-              Our Aquatic Leadership programs help you become a lifeguard or
-              instructor.
+              It&apos;s never too late to learn how to swim. No matter what your
+              age or ability let Poolside Swimming help you become the swimmer
+              you always wanted to be
             </p>
             <Link
               className="text-primary font-bold leading-[25px] uppercase flex items-center gap-2"
               href="/contact-us"
             >
-              contact us <FaArrowRight />
+              request a quore <FaArrowRight />
             </Link>
           </div>
         </div>
