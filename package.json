@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^2.5.1",
     "@stripe/react-stripe-js": "^3.1.1",
     "@stripe/stripe-js": "^5.6.0",
     "antd": "^5.23.4",
@@ -22,6 +23,7 @@
     "react-redux": "^9.2.0",
     "react-router-dom": "^7.1.5",
     "react-stars": "^2.2.5",
+    "redux-persist": "^6.0.0",
     "sonner": "^1.7.4"
   },
   "devDependencies": {
