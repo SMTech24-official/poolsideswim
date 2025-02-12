@@ -35,7 +35,7 @@ const OurServices = () => {
             </p>
             <Link
               className="text-primary font-bold leading-[25px] uppercase flex items-center gap-2"
-              href="/request-a-quoore"
+              href="/lifeguard-services-form"
             >
               request a quore <FaArrowRight />
             </Link>
@@ -61,7 +61,7 @@ const OurServices = () => {
             </p>
             <Link
               className="text-primary font-bold leading-[25px] uppercase flex items-center gap-2"
-              href="/contact-us"
+              href="/adult-classes"
             >
               request a quore <FaArrowRight />
             </Link>
