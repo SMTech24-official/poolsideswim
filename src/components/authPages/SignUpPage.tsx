@@ -36,8 +36,9 @@ const SignUpPage = () => {
     console.log(confirmPassword);
     try {
       const res = await createUser(data).unwrap();
-      // console.log(res?.message);
+      console.log(res);
       if (res?.success === true) {
+        localStorage.setItem("email", res?.data?.email);
         toast(res?.message);
         if (res?.message == "OTP sent successfully") {
           router.push("/verify-otp");

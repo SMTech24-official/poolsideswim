@@ -5,7 +5,7 @@ const authApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     //create user
     createUser: build.mutation({
-      query: (data: any) => {
+      query: (data) => {
         return {
           url: `/users/create`,
           method: "POST",
@@ -14,7 +14,18 @@ const authApi = baseApi.injectEndpoints({
       },
       invalidatesTags: ["Auth"],
     }),
+    // verify user
+    verifyUser: build.mutation({
+      query: (data) => {
+        return {
+          url: "/auth/verify-otp",
+          method: "POST",
+          body: data
+        };
+      },
+      invalidatesTags: ["Auth"]
+    }),
   }),
 });
 
-export const { useCreateUserMutation } = authApi;
+export const { useCreateUserMutation, useVerifyUserMutation } = authApi;
