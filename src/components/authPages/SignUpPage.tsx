@@ -4,11 +4,15 @@ import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import SharedButton from "../shared/SharedButton";
 import Link from "next/link";
-import { LuEye, LuEyeOff  } from "react-icons/lu";
-
+import { LuEye, LuEyeOff } from "react-icons/lu";
+import { useCreateUserMutation } from "@/redux/api/authApi";
+import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 type Inputs = {
-  name: string;
+  firstName: string;
+  lastName: string;
+  phone: number;
   email: string;
   password: string;
   confirmPassword: string;
@@ -17,13 +21,36 @@ type Inputs = {
 const SignUpPage = () => {
   const [showPassword, setShowPassword] = React.useState(false);
   const [showConfirmPassword, setShowConfirmPassword] = React.useState(false);
+  const router = useRouter();
+  const [createUser] = useCreateUserMutation();
   const {
     register,
     handleSubmit,
     formState: { errors },
     getValues,
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = async ({
+    confirmPassword,
+    ...data
+  }) => {
+    console.log(confirmPassword);
+    try {
+      const res = await createUser(data).unwrap();
+      // console.log(res?.message);
+      if (res?.success === true) {
+        toast(res?.message);
+        if (res?.message == "OTP sent successfully") {
+          router.push("/verify-otp");
+        }
+      }
+    } catch (error: unknown) {
+      // console.log(error);
+      toast(
+        (error as { data?: { message?: string } })?.data?.message ||
+          "An error occurred"
+      );
+    }
+  };
 
   return (
     <div className="mx-auto max-w-[555px]">
@@ -37,22 +64,70 @@ const SignUpPage = () => {
       </div>
       <form onSubmit={handleSubmit(onSubmit)} className="grid gap-10">
         <div className="grid gap-4">
+          <div className="flex gap-6 justify-between w-full">
+            <div className="grid gap-3 w-full">
+              <label
+                htmlFor="firstName"
+                className="text-carbon text-base font-medium leading-[25px]"
+              >
+                First Name*
+              </label>
+              <input
+                type="text"
+                id="firstName"
+                placeholder="Enter your full name"
+                className="px-4 py-[13px] bg-whiteSmoke rounded-lg text-gray text-sm h-12"
+                {...register("firstName", { required: true })}
+              />
+              {errors.firstName && (
+                <p className="text-red-500 text-sm">
+                  {errors.firstName.message}
+                </p>
+              )}
+            </div>
+            <div className="grid gap-3 w-full">
+              <label
+                htmlFor="lastName"
+                className="text-carbon text-base font-medium leading-[25px]"
+              >
+                Last Name*
+              </label>
+              <input
+                type="text"
+                id="lastName"
+                placeholder="Enter your full name"
+                className="px-4 py-[13px] bg-whiteSmoke rounded-lg text-gray text-sm h-12"
+                {...register("lastName", { required: true })}
+              />
+              {errors.lastName && (
+                <p className="text-red-500 text-sm">
+                  {errors.lastName.message}
+                </p>
+              )}
+            </div>
+          </div>
           <div className="grid gap-3">
             <label
-              htmlFor="name"
+              htmlFor="phone"
               className="text-carbon text-base font-medium leading-[25px]"
             >
-              Name*
+              Phone*
             </label>
             <input
-              type="text"
-              id="name"
-              placeholder="Enter your name"
+              type="number"
+              id="phone"
+              placeholder="Enter your phone"
               className="px-4 py-[13px] bg-whiteSmoke rounded-lg text-gray text-sm h-12"
-              {...register("name", { required: true })}
+              {...register("phone", {
+                required: "Phone number is required",
+                minLength: {
+                  value: 10,
+                  message: "Phone number must be 10 characters long",
+                },
+              })}
             />
-            {errors.name && (
-              <p className="text-red-500 text-sm">{errors.name.message}</p>
+            {errors.phone && (
+              <p className="text-red-500 text-sm">{errors.phone.message}</p>
             )}
           </div>
           <div className="grid gap-3">
@@ -88,7 +163,15 @@ const SignUpPage = () => {
                 className="w-full px-4 py-[13px] bg-whiteSmoke rounded-lg text-gray text-sm h-12"
                 {...register("password", {
                   required: "Password is required",
-                  minLength: 6,
+                  minLength: {
+                    value: 8,
+                    message: "Password must be at least 8 characters long",
+                  },
+                  pattern: {
+                    value: /^(?=.*[A-Z])(?=.*[a-z])(?=.*[@$!%*?&])/,
+                    message:
+                      "Password must include at least one uppercase letter, one lowercase letter, and one special character (@$!%*?&)",
+                  },
                 })}
               />
               <button
@@ -109,6 +192,7 @@ const SignUpPage = () => {
               <p className="text-red-500 text-sm">{errors.password.message}</p>
             )}
           </div>
+
           <div className="grid gap-3">
             <label
               htmlFor="confirmPassword"
