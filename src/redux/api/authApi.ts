@@ -20,12 +20,27 @@ const authApi = baseApi.injectEndpoints({
         return {
           url: "/auth/verify-otp",
           method: "POST",
-          body: data
+          body: data,
         };
       },
-      invalidatesTags: ["Auth"]
+      invalidatesTags: ["Auth"],
+    }),
+    // login user
+    loginUser: build.mutation({
+      query: (data) => {
+        return {
+          url: "/auth/login",
+          method: "POST",
+          body: data,
+        };
+      },
+      invalidatesTags: ["Auth"],
     }),
   }),
 });
 
-export const { useCreateUserMutation, useVerifyUserMutation } = authApi;
+export const {
+  useCreateUserMutation,
+  useVerifyUserMutation,
+  useLoginUserMutation,
+} = authApi;

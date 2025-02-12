@@ -5,6 +5,12 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import SharedButton from "../shared/SharedButton";
 import Link from "next/link";
 import { LuEye, LuEyeOff } from "react-icons/lu";
+import { useDispatch } from "react-redux";
+import { useLoginUserMutation } from "@/redux/api/authApi";
+import { setUser } from "@/redux/slice/userSlice";
+import Cookies from "js-cookie";
+import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 type Inputs = {
   email: string;
@@ -12,13 +18,35 @@ type Inputs = {
 };
 
 const LoginPage = () => {
+  const dispatch = useDispatch();
+  const router = useRouter();
   const [showPassword, setShowPassword] = React.useState(false);
+  const [loginUser] = useLoginUserMutation();
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    try {
+      const res = await loginUser(data).unwrap();
+
+      if (res?.success === true) {
+        dispatch(setUser(res));
+        // Optionally store token if needed
+        if (res?.data?.accessToken) {
+          localStorage.setItem("accessToken", res?.data?.accessToken);
+          Cookies.set("accessToken", res?.data?.accessToken, { expires: 7 });
+        }
+        toast.success(res?.message);
+        router.push("/");
+      }
+      // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    } catch (error: any) {
+      console.log(error);
+      toast(error?.data?.message);
+    }
+  };
 
   return (
     <div className="mx-auto max-w-[555px]">

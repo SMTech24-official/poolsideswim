@@ -1,6 +1,7 @@
 // create slice to store data and remove data of user
 
 import { createSlice } from "@reduxjs/toolkit";
+import Cookies from "js-cookie";
 import { RootState } from "../store";
 
 interface UserState {
@@ -29,6 +30,7 @@ export const userSlice = createSlice({
       state.user = null;
       if (typeof window !== "undefined") {
         localStorage.removeItem("accessToken");
+        Cookies.remove("accessToken");
       }
     },
   },
