@@ -1,22 +1,18 @@
+import Image from "next/image";
 import React from "react";
+import aboutImage from "@/assets/about/aboutImage.png";
 
 const PoolSideSwim = () => {
   return (
     <div className="container">
       <div className="grid xl:flex flex-row-reverse items-center gap-6 md:gap-12">
-        <div className="md:w-[666px] md:h-[657px] rounded-lg">
-          <iframe
-            className="rounded-lg w-full h-[400px] md:w-[666px] md:h-[657px]"
-            // width="666"
-            // height="657"
-            src="https://www.youtube.com/embed/w4xKguZ1D1o?si=dmetLUGIcQ4TG-Fo"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerPolicy="strict-origin-when-cross-origin"
-            allowFullScreen
-          ></iframe>
-        </div>
+        <Image
+          width={1000}
+          height={1000}
+          src={aboutImage}
+          alt="About Image"
+          className="md:w-[666px] md:h-[657px] rounded-lg"
+        />
         <div className="grid gap-6 md:gap-12">
           <div className="grid gap-4">
             <h2 className="text-[40px] font-bold leading-[48px]">

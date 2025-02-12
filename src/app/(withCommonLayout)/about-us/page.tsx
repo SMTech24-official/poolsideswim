@@ -1,6 +1,4 @@
-import BasicSwims from "@/components/about-us/BasicSwims";
 import Faq from "@/components/about-us/faq/Faq";
-import JoinPoolside from "@/components/about-us/JoinPoolside";
 import PoolSideSwim from "@/components/about-us/PoolSideSwim";
 // import Team from "@/components/about-us/Team";
 import Testimonial from "@/components/home/Testimonial";
@@ -11,9 +9,9 @@ const page = () => {
   return (
     <div className="grid gap-[60px] lg:gap-[120px]">
       <SharedBanner title="About us" routeName="About" />
-      <BasicSwims />
+      {/* <BasicSwims /> */}
       <PoolSideSwim />
-      <JoinPoolside />
+      {/* <JoinPoolside /> */}
       {/* <Team /> */}
       <Faq />
       <Testimonial />
