@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 "use client";
 
 import React from "react";
@@ -18,17 +19,27 @@ const ForgotPage = () => {
     handleSubmit,
     formState: { errors },
   } = useForm<Inputs>();
+
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     try {
       const res = await forgotPassword(data);
-      console.log(res);
+
       if (res?.data?.success) {
-        toast.success(res?.data?.message);
+        toast.success(
+          res.data.message || "Password reset link sent successfully."
+        );
+      } else {
+        toast.error("Something went wrong, please try again.");
       }
-    } catch (error) {
-      console.log(error)
+    } catch (error: any) {
+      console.error("Forgot Password Error:", error);
+
+      const errorMessage =
+        error?.response?.data?.message || "An unexpected error occurred.";
+      toast.error(errorMessage);
     }
   };
+
   return (
     <div className="mx-auto max-w-[555px]">
       <div className="text-center grid gap-4 mb-6">
