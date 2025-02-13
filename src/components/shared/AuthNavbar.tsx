@@ -9,6 +9,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/redux/rootReducer";
 import { FaChevronDown } from "react-icons/fa6";
 import { removeUser } from "@/redux/slice/userSlice";
+import { useRouter } from "next/navigation";
 
 const AuthNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -17,10 +18,12 @@ const AuthNavbar = () => {
   const user = useSelector((state: RootState) => state?.user);
   const isLoggenIn = !!user?.user?.id;
   const dispatch = useDispatch();
+  const router = useRouter();
 
   const handleLogout = () => {
     dispatch(removeUser()); // Dispatch logout action
     setDropdownOpen(false); // Close dropdown
+    router.push("/login");
   };
 
   return (
