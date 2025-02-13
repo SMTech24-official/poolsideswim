@@ -119,14 +119,19 @@ const AuthNavbar = () => {
                   onClick={() => setDropdownOpen(!isDropdownOpen)}
                 />
                 {isDropdownOpen && (
-                  <div className="absolute right-0 bg-white text-black py-2 px-4 mt-2 rounded-md shadow-lg">
-                    {/* Logout button */}
-                    <button
-                      onClick={handleLogout}
-                      className="w-full text-left px-4 py-2 text-sm font-medium hover:bg-gray-200 rounded-md"
+                  <div className="absolute right-0 bg-white text-black py-2 px-4 mt-2 rounded-md shadow-lg grid gap-2">
+                    <Link
+                      href="/profile"
+                      className="text-black font-medium text-lg"
                     >
-                      Logout
-                    </button>
+                      Profile
+                    </Link>
+                    {/* Logout button */}
+                    <SharedButton
+                      onClick={handleLogout}
+                      classes="w-full text-left text-xs font-medium hover:bg-gray-200 rounded-full px-4 py-1 text-nowrap"
+                      text="Log out"
+                    />
                   </div>
                 )}
               </div>
