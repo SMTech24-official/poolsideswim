@@ -47,7 +47,7 @@ const ResetPage = () => {
           Authorization: token,
         },
       }).unwrap();
-      console.log(res);
+      //   console.log(res);
       if (res?.success) {
         toast.success(res?.message);
         router.push("/login");
@@ -96,6 +96,7 @@ const ResetPage = () => {
                 })}
               />
               <button
+                type="button"
                 className="absolute right-5 top-1/2 h-4 w-4 -translate-y-1/2 transform"
                 onClick={() => setShowPassword(!showPassword)}
               >
@@ -134,6 +135,7 @@ const ResetPage = () => {
                 })}
               />
               <button
+                type="button"
                 className="absolute right-5 top-1/2 h-4 w-4 -translate-y-1/2 transform"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               >

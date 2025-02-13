@@ -176,6 +176,7 @@ const SignUpPage = () => {
                 })}
               />
               <button
+                type="button"
                 className="absolute right-5 top-1/2 h-4 w-4 -translate-y-1/2 transform"
                 onClick={() => setShowPassword(!showPassword)}
               >
@@ -214,6 +215,7 @@ const SignUpPage = () => {
                 })}
               />
               <button
+                type="button"
                 className="absolute right-5 top-1/2 h-4 w-4 -translate-y-1/2 transform"
                 onClick={() => setShowConfirmPassword(!showConfirmPassword)}
               >
