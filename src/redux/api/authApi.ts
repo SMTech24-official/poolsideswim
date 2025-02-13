@@ -1,4 +1,3 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { baseApi } from "./baseApi";
 
 const authApi = baseApi.injectEndpoints({
@@ -47,6 +46,21 @@ const authApi = baseApi.injectEndpoints({
       },
       invalidatesTags: ["Auth"],
     }),
+    // reset password
+    resetPassword: build.mutation({
+      query: ({ data, headers }) => {
+        return {
+          url: "/auth/reset-password",
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            ...headers,
+          },
+          body: data,
+        };
+      },
+      invalidatesTags: ["Auth"],
+    }),
   }),
 });
 
@@ -55,4 +69,5 @@ export const {
   useVerifyUserMutation,
   useLoginUserMutation,
   useForgotPasswordMutation,
+  useResetPasswordMutation,
 } = authApi;
