@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { IoIosLogOut } from "react-icons/io";
 import profileImg from "@/assets/gallery-1.svg";
 import Image from "next/image";
@@ -9,16 +9,21 @@ import { RootState } from "@/redux/store";
 import { useRouter } from "next/navigation";
 import { removeUser } from "@/redux/slice/userSlice";
 import { LiaUserEditSolid } from "react-icons/lia";
+import { useGetUserQuery, useUpdateUserMutation } from "@/redux/api/authApi";
+import { toast } from "sonner";
 
 const ProfilePage = () => {
   const user = useSelector((state: RootState) => state?.user);
   //   console.log(user?.user);
-  const userInfo = user?.user;
   const dispatch = useDispatch();
   const router = useRouter();
+  const { data } = useGetUserQuery(user?.user?.id);
+  // console.log(data);
+  const userInfo = data?.data;
 
-  const [image, setImage] = useState<string | null>(null);
+  // const [image, setImage] = useState<string | null>(null);
   const fileInputRef = useRef<HTMLInputElement>(null);
+  const [updateUser] = useUpdateUserMutation();
 
   const handleLogout = () => {
     dispatch(removeUser());
@@ -28,11 +33,22 @@ const ProfilePage = () => {
   const handleImageUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
     if (event.target.files && event.target.files[0]) {
       const file = event.target.files[0];
-      const imageUrl = URL.createObjectURL(file);
-      setImage(imageUrl);
+
+      const formData = new FormData();
+      formData.append("profilePicture", file); // assuming backend expects this field
+
+      updateUser({ formData, id: user?.user?.id })
+        .unwrap()
+        .then((res) => {
+          if (res?.success) {
+            toast.success(res?.message);
+          }
+        })
+        .catch((error) => {
+          console.error("Error updating profile picture:", error);
+        });
     }
   };
-  //   console.log(image);
   return (
     <div className="grid gap-6">
       <div className="flex items-center justify-between">
@@ -42,8 +58,8 @@ const ProfilePage = () => {
             <Image
               width={1000}
               height={1000}
-              src={image || profileImg}
-              alt="Profile image"
+              src={userInfo?.profileImage?.url || profileImg}
+              alt={userInfo?.profileImage?.altText || "Profile image"}
               className="w-[84px] h-[84px] rounded-full object-cover"
             />
             <input

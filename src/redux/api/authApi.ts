@@ -61,6 +61,27 @@ const authApi = baseApi.injectEndpoints({
       },
       invalidatesTags: ["Auth"],
     }),
+    // get user
+    getUser: build.query({
+      query: (id) => {
+        return {
+          url: `/users/${id}`,
+          method: "GET",
+        };
+      },
+      providesTags: ["Auth"],
+    }),
+    // update user
+    updateUser: build.mutation({
+      query: ({ formData, id }) => {
+        return {
+          url: `/users/${id}`,
+          method: "PUT",
+          body: formData,
+        };
+      },
+      invalidatesTags: ["Auth"],
+    }),
   }),
 });
 
@@ -70,4 +91,6 @@ export const {
   useLoginUserMutation,
   useForgotPasswordMutation,
   useResetPasswordMutation,
+  useGetUserQuery,
+  useUpdateUserMutation,
 } = authApi;

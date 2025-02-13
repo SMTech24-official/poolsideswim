@@ -5,12 +5,12 @@ import { Toaster } from "sonner";
 
 const layout = ({ children }: { children: ReactNode }) => {
   return (
-      <body>
-        <AuthNavbar />
-        <main>{children}</main>
-        <Toaster />
-        <Footer />
-      </body>
+    <>
+      <AuthNavbar />
+      <main>{children}</main>
+      <Toaster />
+      <Footer />
+    </>
   );
 };
 
