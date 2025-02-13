@@ -5,7 +5,7 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import SharedButton from "../shared/SharedButton";
 import Link from "next/link";
 import { LuEye, LuEyeOff } from "react-icons/lu";
-import { useSearchParams } from "next/navigation";
+import { useRouter, useSearchParams } from "next/navigation";
 import { useResetPasswordMutation } from "@/redux/api/authApi";
 import { toast } from "sonner";
 
@@ -20,7 +20,8 @@ const ResetPage = () => {
   const [resetPassword] = useResetPasswordMutation();
 
   const searchParams = useSearchParams();
-  const token = searchParams.get("token"); // Getting the token from URL query params
+  const token = searchParams.get("token");
+  const router = useRouter();
 
   const {
     register,
@@ -49,6 +50,7 @@ const ResetPage = () => {
       console.log(res);
       if (res?.success) {
         toast.success(res?.message);
+        router.push("/login");
       }
     } catch (error) {
       console.error("Error during password reset:", error);
