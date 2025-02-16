@@ -6,7 +6,7 @@ const page = () => {
   return (
     <div className="grid gap-[60px] lg:gap-[120px]">
       <SharedBanner
-        title="Adult classes"
+        title="Class registration"
         subtitle="We offer swimming  lessons in summer in comfort or you own pool or our."
         routeName="Request a quoore"
       />
