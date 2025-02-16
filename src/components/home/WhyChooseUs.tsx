@@ -41,7 +41,8 @@ const WhyChooseUs = () => {
             Customized Lessons Tailored to Your Skill Level and Goals
           </p>
         </div>
-        <div className="shadow-customShadow hover:shadow-customShadowMd p-5 rounded-lg transition-all duration-300">
+        {/* card three */}
+        {/* <div className="shadow-customShadow hover:shadow-customShadowMd p-5 rounded-lg transition-all duration-300">
           <div className="bg-primary p-2 rounded inline-block">
             <Image src={badgeIcon} alt="Badge" />
           </div>
@@ -52,7 +53,8 @@ const WhyChooseUs = () => {
           <p className="text-gray text-base leading-[25px]">
             Crystal-Clear Waters with Top-Tier Safety & Hygiene Standards
           </p>
-        </div>
+        </div> */}
+        {/* card four */}
         <div className="shadow-customShadow hover:shadow-customShadowMd p-5 rounded-lg transition-all duration-300">
           <div className="bg-primary p-2 rounded inline-block">
             <Image src={badgeIcon} alt="Badge" />
@@ -65,6 +67,7 @@ const WhyChooseUs = () => {
             Swim at Your Convenience with Easy & Flexible Scheduling Options
           </p>
         </div>
+        {/* card five */}
         <div className="shadow-customShadow hover:shadow-customShadowMd p-5 rounded-lg transition-all duration-300">
           <div className="bg-primary p-2 rounded inline-block">
             <Image src={badgeIcon} alt="Badge" />
@@ -78,6 +81,7 @@ const WhyChooseUs = () => {
             Exciting
           </p>
         </div>
+        {/* card six */}
         <div className="shadow-customShadow hover:shadow-customShadowMd p-5 rounded-lg transition-all duration-300">
           <div className="bg-primary p-2 rounded inline-block">
             <Image src={badgeIcon} alt="Badge" />
