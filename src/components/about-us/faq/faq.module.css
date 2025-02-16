@@ -5,6 +5,10 @@
   gap: 24px !important;
 }
 
+.ant-collapse {
+  border: none !important;
+}
+
 .faqCollapse :global(.ant-collapse-item) {
   border-bottom: 0;
   margin-bottom: 0;

@@ -42,8 +42,9 @@ const faqs = [
 
 const Faq = () => {
   return (
-    <div className="container grid lg:grid-cols-2 gap-6 items-start">
+    <div className="container grid gap-10 items-start">
       <SectionHeader
+        classes="text-center"
         title="Frequently asked question"
         subTitle="Find answers to common questions about our services, bookings, and policies. If you don’t see what you’re looking for, feel free to contact us—we’re here to help!"
       />
