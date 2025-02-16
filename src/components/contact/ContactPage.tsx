@@ -39,17 +39,19 @@ const ContactPage = () => {
                 src={locationIcon}
                 alt="Location Icon"
               />
-              <p className="text-2xl leading-[28px] text-gray">Oakville, ON</p>
+              <p className="text-xl md:text-2xl leading-[28px] text-gray">
+                Oakville, ON
+              </p>
             </div>
             <div className="flex items-center gap-4">
               <Image width={24} height={24} src={phoneIcon} alt="Phone Icon" />
-              <p className="text-2xl leading-[28px] text-gray">
+              <p className="text-xl md:text-2xl leading-[28px] text-gray">
                 +1 905 582 7702
               </p>
             </div>
             <div className="flex items-center gap-4">
               <Image width={24} height={24} src={emailIcon} alt="Email Icon" />
-              <p className="text-2xl leading-[28px] text-gray">
+              <p className="text-xl md:text-2xl leading-[28px] text-gray">
                 {" "}
                 poolsideswimmng@gmail.com
               </p>
@@ -58,7 +60,7 @@ const ContactPage = () => {
         </div>
         {/* right column */}
         <form onSubmit={handleSubmit(onSubmit)} className="grid gap-4">
-          <div className="md:flex items-center gap-6">
+          <div className="grid gap-3 md:flex items-center md:gap-6">
             <div className="grid gap-2 md:w-[354px]">
               <label
                 htmlFor="firstName"
@@ -90,7 +92,7 @@ const ContactPage = () => {
               />
             </div>
           </div>
-          <div className="md:flex items-center gap-6">
+          <div className="grid gap-3 md:flex items-center md:gap-6">
             <div className="grid gap-2 md:w-[354px]">
               <label
                 htmlFor="phone"

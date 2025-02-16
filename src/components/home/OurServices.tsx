@@ -9,9 +9,8 @@ import aboutImg from "@/assets/about/about-img.png";
 
 const OurServices = () => {
   return (
-    <div className="container grid gap-10 lg:gap-20 mb-[128px]">
+    <div className="container grid gap-10 mb-[128px]">
       {/* section title */}
-
       <SectionHeader
         classes="text-center"
         title="Our Services"
