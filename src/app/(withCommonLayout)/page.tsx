@@ -1,5 +1,6 @@
 import About from "@/components/home/About";
 import Banner from "@/components/home/Banner";
+import OurPrograms from "@/components/home/OurPrograms";
 import OurServices from "@/components/home/OurServices";
 import Testimonial from "@/components/home/Testimonial";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
@@ -11,7 +12,7 @@ const page = () => {
       <Banner />
       <About />
       <OurServices />
-      {/* <OurPrograms /> */}
+      <OurPrograms />
       {/* <OurGallery /> */}
       <WhyChooseUs />
       {/* <Blog /> */}
