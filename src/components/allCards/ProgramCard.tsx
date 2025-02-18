@@ -11,14 +11,14 @@ interface ProgramTypes {
 
 const ProgramCard = ({ item }: ProgramTypes) => {
   return (
-    <div className="w-[384px] border rounded-lg border-silver p-5">
-      <div className="relative w-[344px] h-[320px] mb-4 ">
+    <div className="md:w-[384px] border rounded-lg border-silver p-5 mx-auto">
+      <div className="relative md:w-[344px] h-[320px] mb-4 ">
         <Image
           width={1000}
           height={1000}
           src={item?.images?.url}
           alt={item?.images?.altText}
-          className="w-[344px] h-[320px]object-cover"
+          className="md:w-[344px] h-[320px]object-cover"
         />
         <p className="absolute bottom-0 left-0 text-2xl font-semibold leading-7 bg-primary text-white px-6 py-[10px] rounded-bl-lg rounded-tr-lg">
           $<span>{item?.price}</span>

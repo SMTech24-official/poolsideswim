@@ -12,7 +12,7 @@ const OurPrograms = () => {
         subTitle="Start your swim journey with expert lessons in a fun, safe environment. Flexible schedules, certified instructors, and personalized training for all ages"
       />
 
-      <div className="grid md:grid-cols-2 xl:grid-cols-3 gap-6 items-start">
+      <div className="grid lg :grid-cols-2 xl:grid-cols-3 gap-6 items-start">
         {programData?.map((item) => (
           <ProgramCard key={item?.id} item={item} />
         ))}
