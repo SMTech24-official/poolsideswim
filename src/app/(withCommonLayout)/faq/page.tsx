@@ -1,5 +1,5 @@
-import Faq from "@/components/about-us/faq/Faq";
-import PoolSideSwim from "@/components/about-us/PoolSideSwim";
+import Faq from "@/components/faq/Faq";
+import PoolSideSwim from "@/components/faq/PoolSideSwim";
 // import Team from "@/components/about-us/Team";
 import Testimonial from "@/components/home/Testimonial";
 import SharedBanner from "@/components/shared/SharedBanner";

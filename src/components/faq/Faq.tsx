@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import SectionHeader from "../../shared/SectionHeader";
+import SectionHeader from "../shared/SectionHeader";
 import { Collapse } from "antd";
 
 import styles from "./faq.module.css";
