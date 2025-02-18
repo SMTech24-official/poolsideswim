@@ -8,7 +8,7 @@ import React from "react";
 const page = () => {
   return (
     <div className="grid gap-[60px] lg:gap-[120px]">
-      <SharedBanner title="About us" routeName="About" />
+      <SharedBanner title="Frequently Asked Questions" routeName="FAQ" />
       {/* <BasicSwims /> */}
       <PoolSideSwim />
       {/* <JoinPoolside /> */}

@@ -10,6 +10,11 @@ const { Panel } = Collapse;
 
 const faqs = [
   {
+    question: "What age can my child start swimming lessons?",
+    answer:
+      "Your child can start swimming lessons as early as six months old. Our classes focus on water safety and building confidence. As your child grows, we offer age-appropriate lessons to develop their skills. Each lesson is designed to help them progress at their own pace.",
+  },
+  {
     question: "What time of year can I enroll my child in swim lessons?",
     answer:
       "Poolside Swimming is a season company working only in the summer month however, you can book your spot any in advance any time of year.",
@@ -37,6 +42,15 @@ const faqs = [
     question: "Does Poolside Swimming run classes on the holidays?",
     answer:
       "Poolside Swimming will conduct classes on the Civic Holidays of July and August.  If the client cancels or misses the class it is not the responsibility of Poolside Swimming to make up the missed class.",
+  },
+  {
+    question: "What is the pool temperature at your pool?",
+    answer: "86 to 88F or 30 to 32C",
+  },
+  {
+    question: "Can I do a Semi Private Class?",
+    answer:
+      "Yes you can but the students must be at the same levels.   There is an additional charge per student.  This does not apply to Bronze Level Courses.",
   },
 ];
 

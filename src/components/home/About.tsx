@@ -48,7 +48,7 @@ const About = () => {
             to making swimming fun for you
           </p>
         </div>
-        <Link href="/about-us">
+        <Link href="/faq">
           <SharedButton text="learn more" />
         </Link>
       </div>
