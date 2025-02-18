@@ -11,7 +11,7 @@ interface ProgramTypes {
 
 const ProgramCard = ({ item }: ProgramTypes) => {
   return (
-    <div className="md:w-[384px] border rounded-lg border-silver p-5 mx-auto">
+    <div className="md:w-[384px] border rounded-lg border-silver p-5 mx-auto shadow-customShadow hover:shadow-customShadowMd transition-all duration-300">
       <div className="relative md:w-[344px] h-[320px] mb-4 ">
         <Image
           width={1000}
