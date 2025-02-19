@@ -20,20 +20,15 @@ const OurServices = () => {
         <div className="grid xl:flex items-center gap-5 xl:gap-10">
           <div className="grid gap-4">
             <h2 className="text-primary text-[32px] font-bold leading-[38px]">
-              Learn to Swim
+              Learn to Swim (Swim for Life Program)
             </h2>
             <p className="text-gray text-base leading-[25px]">
-              Swimming is more than just fun—it’s a vital life skill that
-              ensures safety, fitness, and confidence in the water. Whether
-              you&apos;re a beginner or want to improve your strokes, our Learn
-              to Swim program offers structured, step-by-step lessons in a
-              supportive environment. With expert guidance, you’ll gain water
-              confidence, master essential techniques, and enjoy swimming with
-              ease. <br /> Our certified instructors make learning fun, safe,
-              and stress-free. From floating to freestyle, we help you build
-              skills at your own pace. Swimming improves strength, endurance,
-              and overall health. Join us today and make a splash on your
-              swimming journey
+              There are 5 modules in the Lifesaving Society Swim for Life®
+              program: <br /> Parent & Tot for parents and children up to 3
+              years of age <br /> Preschool for children 3-5 years Swimmer for
+              children 5 years and older <br /> Adult Swimmer for people over 16
+              years <br /> Fitness Swimmer for people of any age who want to
+              improve their overall physical fitness
             </p>
           </div>
           <Image

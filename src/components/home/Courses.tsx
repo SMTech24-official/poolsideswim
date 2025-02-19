@@ -1,24 +1,24 @@
 import React from "react";
 import SectionHeader from "../shared/SectionHeader";
-import ProgramCard from "../allCards/ProgramCard";
 import { programData } from "../data/ProgramData";
+import CourseCard from "../allCards/CourseCard";
 
-const OurPrograms = () => {
+const Courses = () => {
   return (
     <div className="container grid gap-10">
       <SectionHeader
         classes="text-center"
-        title="Program Categories"
-        subTitle="Start your swim journey with expert lessons in a fun, safe environment. Flexible schedules, certified instructors, and personalized training for all ages"
+        title="LIfesaving Courses"
+        subTitle="Bronze medal awards are designed for swimmers who are looking for challenge or beginning the path towards becoming a Lifeguard or Swimming Instructor"
       />
 
       <div className="grid lg :grid-cols-2 xl:grid-cols-3 gap-6 items-start">
         {programData?.map((item) => (
-          <ProgramCard key={item?.id} item={item} />
+          <CourseCard key={item?.id} item={item} />
         ))}
       </div>
     </div>
   );
 };
 
-export default OurPrograms;
+export default Courses;

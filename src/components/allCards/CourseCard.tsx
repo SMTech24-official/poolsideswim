@@ -9,9 +9,9 @@ interface ProgramTypes {
   item: ProgramType;
 }
 
-const ProgramCard = ({ item }: ProgramTypes) => {
+const CourseCard = ({ item }: ProgramTypes) => {
   return (
-    <div className="md:w-[384px] border rounded-lg border-silver p-5 mx-auto shadow-customShadow hover:shadow-customShadowMd transition-all duration-300">
+    <div className="md:w-[384px] border rounded-lg border-silver p-5 mx-auto">
       <div className="relative md:w-[344px] h-[320px] mb-4 ">
         <Image
           width={1000}
@@ -49,4 +49,4 @@ const ProgramCard = ({ item }: ProgramTypes) => {
   );
 };
 
-export default ProgramCard;
+export default CourseCard;
