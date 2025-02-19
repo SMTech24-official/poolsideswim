@@ -1,14 +1,14 @@
 import { StaticImageData } from "next/image";
 
-export interface ProgramType {
+export interface CourseType {
   id?: string;
   title: string;
   description: string;
-  prerequisite: string;
+  prerequisites: string;
   duration: string;
-  schedule: string;
+  daysRange: string;
   price: string;
-  images: {
+  image: {
     url: StaticImageData;
     altText: string;
   };

@@ -1,9 +1,15 @@
+"use client";
+
 import React from "react";
 import SectionHeader from "../shared/SectionHeader";
-import { programData } from "../data/ProgramData";
 import CourseCard from "../allCards/CourseCard";
+import { useGetCourseQuery } from "@/redux/api/courseApi";
+import { CourseType } from "@/app/types/Program";
 
 const Courses = () => {
+  const { data } = useGetCourseQuery("");
+  console.log(data?.data);
+  const courseData = data?.data;
   return (
     <div className="container grid gap-10">
       <SectionHeader
@@ -13,7 +19,7 @@ const Courses = () => {
       />
 
       <div className="grid lg :grid-cols-2 xl:grid-cols-3 gap-6 items-start">
-        {programData?.map((item) => (
+        {courseData?.map((item: CourseType) => (
           <CourseCard key={item?.id} item={item} />
         ))}
       </div>
