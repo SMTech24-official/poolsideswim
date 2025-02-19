@@ -7,10 +7,11 @@ import SharedButton from "../shared/SharedButton";
 import Testimonialcard from "../allCards/Testimonialcard";
 import Link from "next/link";
 import { TestimonialData } from "../data/TestimonialData";
+import { usePathname } from "next/navigation";
 
 const Testimonial = () => {
-  // const pathname = usePathname();
-  // const testimonial = pathname.split("/").pop();
+  const pathname = usePathname();
+  const testimonial = pathname.split("/").pop();
   // console.log(testimonial);
   return (
     <div className="bg-gray4 pt-[112px] pb-[167px]">
@@ -37,9 +38,13 @@ const Testimonial = () => {
             Confidence, Mastered New Skills, and Enjoyed Their Journey with Back
             to Basics Swim!
           </p>
-          <Link href="/testimonial">
-            <SharedButton classes="mt-6 lg:mt-12" text="View All" />
-          </Link>
+          {testimonial === "faq" ? (
+            <Link href="/testimonial">
+              <SharedButton classes="mt-6 lg:mt-12" text="View All" />
+            </Link>
+          ) : (
+            ""
+          )}
         </div>
         <div className="grid md:flex items-center gap-36 md:gap-6">
           {TestimonialData?.slice(0, 2)?.map((review) => (
