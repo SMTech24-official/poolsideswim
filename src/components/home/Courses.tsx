@@ -5,11 +5,15 @@ import SectionHeader from "../shared/SectionHeader";
 import CourseCard from "../allCards/CourseCard";
 import { useGetCourseQuery } from "@/redux/api/courseApi";
 import { CourseType } from "@/app/types/Program";
+import Loading from "../shared/Loading";
 
 const Courses = () => {
-  const { data } = useGetCourseQuery("");
-  console.log(data?.data);
+  const { data, isLoading } = useGetCourseQuery("");
+  // console.log(data?.data);
   const courseData = data?.data;
+  if (isLoading) {
+    return <Loading />;
+  }
   return (
     <div className="container grid gap-10">
       <SectionHeader

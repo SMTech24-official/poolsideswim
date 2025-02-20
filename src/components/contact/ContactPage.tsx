@@ -7,6 +7,8 @@ import phoneIcon from "@/assets/contact/phone-icon.svg";
 import emailIcon from "@/assets/contact/email-icon.svg";
 import { SubmitHandler, useForm } from "react-hook-form";
 import SharedButton from "../shared/SharedButton";
+import { useSendContactMutation } from "@/redux/api/contactApi";
+import { toast } from "sonner";
 
 interface Inputs {
   firstName: string;
@@ -17,12 +19,23 @@ interface Inputs {
 }
 
 const ContactPage = () => {
+  const [sendContact] = useSendContactMutation();
   const {
     register,
     handleSubmit,
     // formState: { errors },
   } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    try {
+      const res = await sendContact(data).unwrap();
+      console.log(res);
+      if (res?.success) {
+        toast.success(res?.message);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="container">
       <div className="grid xl:flex gap-10 justify-between items-start">

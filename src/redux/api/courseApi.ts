@@ -1,6 +1,6 @@
 import { baseApi } from "./baseApi";
 
-const authApi = baseApi.injectEndpoints({
+const courseApi = baseApi.injectEndpoints({
   endpoints: (build) => ({
     // get courses
     getCourse: build.query({
@@ -15,4 +15,4 @@ const authApi = baseApi.injectEndpoints({
   }),
 });
 
-export const { useGetCourseQuery } = authApi;
+export const { useGetCourseQuery } = courseApi;
