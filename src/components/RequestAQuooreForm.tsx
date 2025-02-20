@@ -3,41 +3,75 @@
 import React from "react";
 import { SubmitHandler, useForm } from "react-hook-form";
 import SharedButton from "./shared/SharedButton";
+import { useSendContactMutation } from "@/redux/api/contactApi";
+import { toast } from "sonner";
+import { usePathname } from "next/navigation";
 
 interface Inputs {
-  name: string;
+  firstName: string;
+  lastName: string;
   email: string;
   phone: string;
   address: string;
   city: string;
-  booking: string;
-  courseName: string;
-  participants: string;
+  message: string;
 }
 
 const RequestAQuooreForm = () => {
+  const pathname = usePathname();
+  const routeName = pathname.split("/").pop();
+  // console.log(routeName);
+  const [sendContact] = useSendContactMutation();
+  const subject = routeName;
   const { register, handleSubmit } = useForm<Inputs>();
-  const onSubmit: SubmitHandler<Inputs> = (data) => console.log(data);
+  const onSubmit: SubmitHandler<Inputs> = async (data) => {
+    try {
+      const res = await sendContact({ subject, ...data }).unwrap();
+      console.log(res);
+      if (res?.success) {
+        toast.success(res?.message);
+      }
+    } catch (error) {
+      console.log(error);
+    }
+  };
   return (
     <div className="container grid gap-10">
       <h2 className="text-[#000B33] text-2xl font-semibold leading-7 text-center">
         Please Complete the Form Below to get a Quote:
       </h2>
       <form onSubmit={handleSubmit(onSubmit)} className="grid gap-6">
-        <div className="grid gap-4">
-          <label
-            htmlFor="name"
-            className="text-base font-medium leading-[25px] text-carbon"
-          >
-            Name*
-          </label>
-          <input
-            type="text"
-            id="name"
-            placeholder="Enter your name"
-            className="px-4 py-5 text-gray bg-gray4 rounded-lg"
-            {...register("name", { required: true })}
-          />
+        <div className="md:flex gap-6 w-full">
+          <div className="grid gap-4 w-full">
+            <label
+              htmlFor="firstName"
+              className="text-base font-medium leading-[25px] text-carbon"
+            >
+              First Name*
+            </label>
+            <input
+              type="text"
+              id="firstName"
+              placeholder="Enter your first name"
+              className="px-4 py-5 text-gray bg-gray4 rounded-lg"
+              {...register("firstName", { required: true })}
+            />
+          </div>
+          <div className="grid gap-4 w-full">
+            <label
+              htmlFor="lastName"
+              className="text-base font-medium leading-[25px] text-carbon"
+            >
+              Last Name*
+            </label>
+            <input
+              type="text"
+              id="lastName"
+              placeholder="Enter your last name"
+              className="px-4 py-5 text-gray bg-gray4 rounded-lg"
+              {...register("lastName", { required: true })}
+            />
+          </div>
         </div>
         <div className="md:flex gap-6 w-full">
           <div className="grid gap-4 w-full">
@@ -103,51 +137,19 @@ const RequestAQuooreForm = () => {
             />
           </div>
         </div>
-        <div className="md:flex gap-6 w-full">
-          <div className="grid gap-4 w-full">
-            <label
-              htmlFor="booking"
-              className="text-base font-medium leading-[25px] text-carbon"
-            >
-              Booking date*
-            </label>
-            <input
-              type="text"
-              id="booking"
-              placeholder="mm/dd/yy"
-              className="px-4 py-5 text-gray bg-gray4 rounded-lg"
-              {...register("booking", { required: true })}
-            />
-          </div>
-          <div className="grid gap-4 w-full">
-            <label
-              htmlFor="courseName"
-              className="text-base font-medium leading-[25px] text-carbon"
-            >
-              Type of course*
-            </label>
-            <input
-              type="text"
-              id="courseName"
-              placeholder="Enter your course name"
-              className="px-4 py-5 text-gray bg-gray4 rounded-lg"
-              {...register("courseName", { required: true })}
-            />
-          </div>
-        </div>
         <div className="grid gap-4">
           <label
-            htmlFor="participants"
+            htmlFor="message"
             className="text-base font-medium leading-[25px] text-carbon"
           >
-            Number of participants*
+            Message*
           </label>
-          <input
-            type="number"
-            id="participants"
-            placeholder="Enter number of participants"
+          <textarea
+            rows={10}
+            id="message"
+            placeholder="Enter your message"
             className="px-4 py-5 text-gray bg-gray4 rounded-lg"
-            {...register("participants", { required: true })}
+            {...register("message", { required: true })}
           />
         </div>
         <div className="flex justify-center mt-4">
