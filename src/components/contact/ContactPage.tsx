@@ -20,6 +20,7 @@ interface Inputs {
 
 const ContactPage = () => {
   const [sendContact] = useSendContactMutation();
+  const subject = "contact";
   const {
     register,
     handleSubmit,
@@ -27,7 +28,7 @@ const ContactPage = () => {
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     try {
-      const res = await sendContact(data).unwrap();
+      const res = await sendContact({ subject, ...data }).unwrap();
       console.log(res);
       if (res?.success) {
         toast.success(res?.message);
