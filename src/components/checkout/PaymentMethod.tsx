@@ -6,8 +6,10 @@ import {
 import React from "react";
 import SharedButton from "../shared/SharedButton";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 const PaymentMethod = () => {
+  const router = useRouter();
   const stripe = useStripe();
   const elements = useElements();
   // const [loading, setLoading] = useState(false);
@@ -31,9 +33,11 @@ const PaymentMethod = () => {
     if (error) {
       // Handle error
       toast.error("something went wrong"); // Error message
+      console.log(error);
     } else if (paymentIntent?.status === "succeeded") {
       console.log("Payment Successfull:", paymentIntent);
       toast.success("Payment Successfull"); // Success message
+      router.push("/");
     }
 
     // setLoading(false);
