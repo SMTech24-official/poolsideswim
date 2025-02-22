@@ -12,15 +12,10 @@ const PaymentMethod = () => {
   const router = useRouter();
   const stripe = useStripe();
   const elements = useElements();
-  // const [loading, setLoading] = useState(false);
-  // const [error, setError] = useState<string | null>(null);
 
   const handleSubmit = async (event: React.FormEvent) => {
     event.preventDefault();
     if (!stripe || !elements) return;
-
-    // setLoading(true);
-    // setError(null);
 
     const { error, paymentIntent } = await stripe.confirmPayment({
       elements,
@@ -39,8 +34,6 @@ const PaymentMethod = () => {
       toast.success("Payment Successfull"); // Success message
       router.push("/");
     }
-
-    // setLoading(false);
   };
   return (
     <form onSubmit={handleSubmit}>

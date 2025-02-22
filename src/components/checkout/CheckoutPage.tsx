@@ -51,12 +51,6 @@ const CheckoutPage = () => {
         zipCode: data?.zipCode,
         countryOrRegion: "US",
       },
-      // paymentMethod: {
-      //   cardNumber: data.cardNumber,
-      //   cardExpiry: `${expMonth}/${expYear}`,
-      //   cardCvc: data.cardCvc,
-      //   nameOnCard: data.nameOnCard,
-      // },
     };
 
     try {
@@ -245,11 +239,6 @@ const CheckoutPage = () => {
               <PaymentMethod />
             </Elements>
           )}
-          {/* <SharedButton
-              type="submit"
-              text="Pay"
-              classes="w-full rounded-lg mt-4"
-            /> */}
         </div>
       </div>
     </div>
