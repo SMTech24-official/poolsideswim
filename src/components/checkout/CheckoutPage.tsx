@@ -8,6 +8,7 @@ import SharedButton from "../shared/SharedButton";
 import { useCreatePaymentIntentMutation } from "@/redux/api/paymentApi";
 import { useParams } from "next/navigation";
 import { useState } from "react";
+import { useGetSingleCourseByIdQuery } from "@/redux/api/courseApi";
 
 interface Inputs {
   phone: string;
@@ -27,10 +28,11 @@ const stripePromise = loadStripe(
 
 const CheckoutPage = () => {
   const { register, handleSubmit } = useForm<Inputs>();
-
-  const [createPaymentIntent, { isLoading }] = useCreatePaymentIntentMutation();
   const params = useParams();
   const courseId = params?.id;
+  const { data } = useGetSingleCourseByIdQuery(courseId);
+  // console.log(data?.data?.title);
+  const [createPaymentIntent, { isLoading }] = useCreatePaymentIntentMutation();
   const [clientSecret, setClientSecret] = useState<string | undefined>(
     undefined
   );
@@ -79,8 +81,8 @@ const CheckoutPage = () => {
             </h2>
             {/* lessons name */}
             <p className="text-base font-medium leading-[22px] flex items-center gap-4">
-              Lessons name:{" "}
-              <span className="text-primary">Baby & Toddler Classes</span>
+              Crouse name:{" "}
+              <span className="text-primary">{data?.data?.title}</span>
             </p>
             <div className="md:flex items-center gap-4 w-full">
               <div className="grid gap-2">
