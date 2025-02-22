@@ -5,6 +5,9 @@ import { loadStripe } from "@stripe/stripe-js";
 import { SubmitHandler, useForm } from "react-hook-form";
 import PaymentMethod from "./PaymentMethod";
 import SharedButton from "../shared/SharedButton";
+import { useCreatePaymentIntentMutation } from "@/redux/api/paymentApi";
+import { useParams } from "next/navigation";
+import { useState } from "react";
 
 interface Inputs {
   phone: string;
@@ -18,22 +21,52 @@ interface Inputs {
   zipCode: string;
 }
 
-const stripePromise = loadStripe("pk_test_TYooMQauvdEDq54NiTphI7jx");
+const stripePromise = loadStripe(
+  "pk_test_51Qh3UWD7tnlYKmLUjngjitMEHTgFxq1tIw7mZ5k5eRXs2PXXr2qBXzR9CsqzHL9vjaqqwDdgfwcZMBpabL0HgQ6L00nIPdG6Gh"
+);
 
 const CheckoutPage = () => {
   const { register, handleSubmit } = useForm<Inputs>();
+
+  const [createPaymentIntent, { isLoading }] = useCreatePaymentIntentMutation();
+  const params = useParams();
+  const courseId = params?.id;
+  const [clientSecret, setClientSecret] = useState<string | undefined>(
+    undefined
+  );
+
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
     console.log(data);
-  };
+    const formattedData = {
+      courseId: courseId,
+      currency: "usd",
+      billingDetails: {
+        firstName: data?.firstName,
+        lastName: data?.lastName,
+        email: data?.email,
+        address: data?.address,
+        country: data?.country,
+        city: data?.city,
+        state: data?.state,
+        zipCode: data?.zipCode,
+        countryOrRegion: "US",
+      },
+      // paymentMethod: {
+      //   cardNumber: data.cardNumber,
+      //   cardExpiry: `${expMonth}/${expYear}`,
+      //   cardCvc: data.cardCvc,
+      //   nameOnCard: data.nameOnCard,
+      // },
+    };
 
-  const options = {
-    mode: "payment" as const,
-    amount: 1099,
-    currency: "usd",
-    // Fully customizable with appearance API.
-    appearance: {
-      /*...*/
-    },
+    try {
+      const res = await createPaymentIntent(formattedData).unwrap();
+      console.log("Payment Intent Response:", res);
+      // console.log(res?.data?.paymentIntent?.client_secret);
+      setClientSecret(res?.data?.paymentIntent?.client_secret);
+    } catch (error) {
+      console.error("Error creating payment intent:", error);
+    }
   };
 
   return (
@@ -44,8 +77,8 @@ const CheckoutPage = () => {
         </h2>
         <div className="border-b-[1px] border-[#DBDBDB]"></div>
       </div>
-      <form className="mt-10" onSubmit={handleSubmit(onSubmit)}>
-        <div className="xl:flex items-center gap-6">
+      <div className="xl:flex items-center gap-6">
+        <form className="mt-10" onSubmit={handleSubmit(onSubmit)}>
           <div className="grid gap-6">
             <h2 className="text-black text-[32px] font-bold leading-[38px]">
               Contact
@@ -107,7 +140,7 @@ const CheckoutPage = () => {
                   </select>
                 </div>
                 <div className="md:flex items-center gap-4 w-full">
-                  <div className="grid gap-2">
+                  <div className="grid gap-2 w-full">
                     <label
                       htmlFor="firstName"
                       className="font-medium text-base leading-[25px]"
@@ -122,7 +155,7 @@ const CheckoutPage = () => {
                       className="px-4 py-[17px] text-gray bg-gray4 rounded-lg"
                     />
                   </div>
-                  <div className="grid gap-2">
+                  <div className="grid gap-2 w-full">
                     <label
                       htmlFor="lastName"
                       className="font-medium text-base leading-[25px]"
@@ -193,21 +226,32 @@ const CheckoutPage = () => {
                   />
                 </div>
               </div>
+              {!clientSecret ? (
+                <SharedButton
+                  type="submit"
+                  text="Next"
+                  isLoading={isLoading}
+                  classes="w-full rounded-lg mt-4"
+                />
+              ) : (
+                ""
+              )}
             </div>
           </div>
-          {/* payment method */}
-          <div className="w-full">
-            <Elements stripe={stripePromise} options={options}>
+        </form>
+        <div className="w-full">
+          {clientSecret && (
+            <Elements stripe={stripePromise} options={{ clientSecret }}>
               <PaymentMethod />
             </Elements>
-            <SharedButton
+          )}
+          {/* <SharedButton
               type="submit"
               text="Pay"
               classes="w-full rounded-lg mt-4"
-            />
-          </div>
+            /> */}
         </div>
-      </form>
+      </div>
     </div>
   );
 };

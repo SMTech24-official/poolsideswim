@@ -1,12 +1,49 @@
-import { PaymentElement } from '@stripe/react-stripe-js';
-import React from 'react';
+import {
+  PaymentElement,
+  useElements,
+  useStripe,
+} from "@stripe/react-stripe-js";
+import React from "react";
+import SharedButton from "../shared/SharedButton";
+import { toast } from "sonner";
 
 const PaymentMethod = () => {
-    return (
-        <div>
-            <PaymentElement />
-        </div>
-    );
+  const stripe = useStripe();
+  const elements = useElements();
+  // const [loading, setLoading] = useState(false);
+  // const [error, setError] = useState<string | null>(null);
+
+  const handleSubmit = async (event: React.FormEvent) => {
+    event.preventDefault();
+    if (!stripe || !elements) return;
+
+    // setLoading(true);
+    // setError(null);
+
+    const { error, paymentIntent } = await stripe.confirmPayment({
+      elements,
+      confirmParams: {
+        return_url: window.location.origin + "/payment-success",
+      },
+      redirect: "if_required",
+    });
+
+    if (error) {
+      // Handle error
+      toast.error("something went wrong"); // Error message
+    } else if (paymentIntent?.status === "succeeded") {
+      console.log("Payment Successfull:", paymentIntent);
+      toast.success("Payment Successfull"); // Success message
+    }
+
+    // setLoading(false);
+  };
+  return (
+    <form onSubmit={handleSubmit}>
+      <PaymentElement />
+      <SharedButton type="submit" text="Pay" classes="w-full rounded-lg mt-4" />
+    </form>
+  );
 };
 
 export default PaymentMethod;

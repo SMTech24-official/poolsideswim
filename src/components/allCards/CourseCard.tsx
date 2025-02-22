@@ -4,6 +4,7 @@ import Image from "next/image";
 import React from "react";
 import SharedButton from "../shared/SharedButton";
 import { CourseType } from "@/app/types/Program";
+import Link from "next/link";
 
 interface CourseTypesProps {
   item: CourseType;
@@ -43,7 +44,9 @@ const CourseCard = ({ item }: CourseTypesProps) => {
           <p className="leading-6">{item?.daysRange}</p>
         </div>
         <div className="border-silver border-b"></div>
-        <SharedButton classes="w-full py-3" text="Book now" />
+        <Link href={`/checkout/${item?.id}`}>
+          <SharedButton classes="w-full py-3" text="Book now" />
+        </Link>
       </div>
     </div>
   );
