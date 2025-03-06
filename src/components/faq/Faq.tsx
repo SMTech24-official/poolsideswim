@@ -17,7 +17,7 @@ const faqs = [
   {
     question: "What time of year can I enroll my child in swim lessons?",
     answer:
-      "Poolside Swimming is a season company working only in the summer month however, you can book your spot any in advance any time of year.",
+      "Poolside Swimming is a seasonal company working only in the summer months however, you can book your spot in advance any time of year.",
   },
   {
     question: "How long are swim lessons?",
@@ -36,7 +36,7 @@ const faqs = [
   {
     question: "What if it rains?",
     answer:
-      "The Instructor is the one who determine a 'rain day' and if the class will be rescheduled, not the client. Rain days will be made up at at the earliest convenience of the instructor",
+      "The Instructor is the one who determines a 'rain day' and if the class will be rescheduled, not the client. We try to work through the rain when possible. Rain days will be made up at the earliest convenience of the instructor",
   },
   {
     question: "Does Poolside Swimming run classes on the holidays?",

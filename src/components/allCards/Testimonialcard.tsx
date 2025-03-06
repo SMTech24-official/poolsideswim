@@ -13,7 +13,7 @@ interface ReviewProps {
 
 const Testimonialcard = ({ review }: ReviewProps) => {
   return (
-    <div className="shadow-customShadowMd rounded-lg lg:w-[372px] h-[264px] relative mx-auto">
+    <div className="shadow-customShadowMd rounded-lg lg:w-[372px] h-[550px] relative mx-auto">
       <div className="absolute -top-8 right-0 left-0 bg-white w-[64px] h-[64px] rounded-full place-content-center justify-center flex mx-auto">
         <Image width={32} height={37} src={quoteImg} alt="Quote" className="" />
       </div>

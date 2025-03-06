@@ -56,7 +56,7 @@ const Navbar = () => {
             height={48}
             src={logo}
             alt="Logo"
-            className="w-[118px] h-[48px]"
+            className="w-[168px] h-[68px]"
           />
         </Link>
 

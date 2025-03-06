@@ -19,7 +19,7 @@ const Courses = () => {
       <SectionHeader
         classes="text-center"
         title="LIfesaving Courses"
-        subTitle="Bronze medal awards are designed for swimmers who are looking for challenge or beginning the path towards becoming a Lifeguard or Swimming Instructor"
+        subTitle="The Bronze Medal awards are designed for swimmers who are looking for a challenge or beginning the path towards becoming a Lifeguard or Swimming Instructor"
       />
 
       <div className="grid lg :grid-cols-2 xl:grid-cols-3 gap-6 items-start">
