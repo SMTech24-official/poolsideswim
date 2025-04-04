@@ -126,15 +126,17 @@ const Navbar = () => {
           </button>
         </div>
         {/* Login Button (always visible) */}
-        <div>
+
+
+        {/* <div>
           {isLoggenIn ? (
             <div className="flex items-center gap-4">
-              {/* Display user name */}
+              Display user name
               <p className="text-white">
                 {user?.user?.firstName} {user?.user?.lastName}
               </p>
 
-              {/* Icon for dropdown */}
+              Icon for dropdown
               <div className="relative">
                 <FaChevronDown
                   className="text-white cursor-pointer"
@@ -148,7 +150,7 @@ const Navbar = () => {
                     >
                       Profile
                     </Link>
-                    {/* Logout button */}
+                    Logout button
                     <SharedButton
                       onClick={handleLogout}
                       classes="w-full text-left text-xs font-medium hover:bg-gray-200 rounded-full px-4 py-1 text-nowrap"
@@ -159,7 +161,7 @@ const Navbar = () => {
               </div>
             </div>
           ) : (
-            // If not logged in, show login button
+             If not logged in, show login button
             <Link href="/login">
               <SharedButton
                 classes="bg-white hover:bg-white/95 !text-black py-[9px]"
@@ -167,7 +169,7 @@ const Navbar = () => {
               />
             </Link>
           )}
-        </div>
+        </div> */}
       </div>
 
       {/* Mobile Menu (toggle visibility based on state) */}

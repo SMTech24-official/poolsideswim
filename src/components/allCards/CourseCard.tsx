@@ -19,12 +19,14 @@ const CourseCard = ({ item }: CourseTypesProps) => {
           height={1000}
           src={item?.image?.url}
           alt={item?.image?.altText}
-          className="md:w-[344px] h-[320px]object-cover"
+          className="md:w-[344px] h-[320px] object-cover"
         />
+        
         <p className="absolute bottom-0 left-0 text-2xl font-semibold leading-7 bg-primary text-white px-6 py-[10px] rounded-bl-lg rounded-tr-lg">
           $<span>{item?.price}</span>
         </p>
       </div>
+
       <h2 className="text-black text-xl font-semibold leading-7 mb-3">
         {item?.title}
       </h2>

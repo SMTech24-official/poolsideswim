@@ -15,7 +15,7 @@ const Banner = () => {
       />
       <div className="container">
         <div className="text-white absolute top-0 bottom-0 grid place-content-center">
-          <h1 className="text-4xl lg:text-[64px] font-bold xl:leading-[76px] mb-4">
+          <h1 className="text-4xl lg:text-[64px] font-bold lg:leading-[70px] xl:leading-[76px] mb-4">
             Swimming made easy, fun, <br /> and convenient right in your <br />{" "}
             own pool or ours.
           </h1>

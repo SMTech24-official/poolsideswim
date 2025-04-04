@@ -7,15 +7,18 @@ import Link from "next/link";
 
 const About = () => {
   return (
-    <div className="container grid xl:flex items-center gap-6 md:gap-12">
-      <Image
-        width={1000}
-        height={1000}
-        src={aboutImage}
-        alt="About Image"
-        className="w-[666px] md:h-[560px]"
-      />
-      <div className="grid gap-6 md:gap-12">
+    <div className="container flex flex-col lg:flex-row items-center gap-6 md:gap-12">
+      <div className="flex-1">
+        <Image
+          src={aboutImage}
+          alt="About Image"
+          width={1000}
+          height={1000}
+          className="w-full max-w-[666px] h-auto md:h-[560px] object-cover rounded-lg"
+        />
+      </div>
+
+      <div className="flex-1 grid gap-6 md:gap-12">
         <div className="grid gap-4">
           <div className="flex gap-2 items-center">
             <Image
