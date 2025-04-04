@@ -23,12 +23,21 @@ const OurServices = () => {
               Learn to Swim (Swim for Life Program)
             </h2>
             <p className="text-gray text-base leading-[25px]">
-              There are 5 modules in the Lifesaving Society Swim for Life®
-              program: <br /> Parent & Tot for parents and children up to 3
-              years of age <br /> Preschool for children 3-5 years Swimmer for
-              children 5 years and older <br /> Adult Swimmer for people over 16
-              years <br /> Fitness Swimmer for people of any age who want to
-              improve their overall physical fitness
+              <ul className="list-disc pl-5">
+                <li>
+                  There are 5 modules in the Lifesaving Society Swim for Life®
+                  program:
+                </li>
+                <li>
+                  Parent & Tot for parents and children up to 3 years of age
+                </li>
+                <li>
+                  Preschool for children 3-5 years Swimmer for children 5 years
+                  and older{" "}
+                </li>
+                <li>Adult Swimmer for people over 16 years</li>
+                <li>Fitness Swimmer for people of any age who want to improve their overall physical fitness</li>
+              </ul>
             </p>
           </div>
           <Image
