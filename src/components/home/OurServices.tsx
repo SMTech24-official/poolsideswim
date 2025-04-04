@@ -17,37 +17,39 @@ const OurServices = () => {
         subTitle="Discover our tailored swimming programs for all ages and skill levels. From beginners to advanced swimmers, we help you build confidence and master the water."
       />
       <div className="grid gap-10">
-        <div className="grid xl:flex items-center gap-5 xl:gap-10">
-          <div className="grid gap-4">
+        <div className="flex flex-col lg:flex-row items-center gap-5 xl:gap-10">
+          <div className="flex-1 grid gap-4">
             <h2 className="text-primary text-[32px] font-bold leading-[38px]">
               Learn to Swim (Swim for Life Program)
             </h2>
-            <p className="text-gray text-base leading-[25px]">
-              <ul className="list-disc pl-5">
-                <li>
-                  There are 5 modules in the Lifesaving Society Swim for Life®
-                  program:
-                </li>
-                <li>
-                  Parent & Tot for parents and children up to 3 years of age
-                </li>
-                <li>
-                  Preschool for children 3-5 years Swimmer for children 5 years
-                  and older{" "}
-                </li>
-                <li>Adult Swimmer for people over 16 years</li>
-                <li>Fitness Swimmer for people of any age who want to improve their overall physical fitness</li>
-              </ul>
-            </p>
+            <ul className="list-disc pl-5 space-y-2">
+              <li>
+                There are 5 modules in the Lifesaving Society Swim for Life®
+                program:
+              </li>
+              <li>
+                Parent & Tot for parents and children up to 3 years of age
+              </li>
+              <li>
+                Preschool for children 3-5 years Swimmer for children 5 years
+                and older{" "}
+              </li>
+              <li>Adult Swimmer for people over 16 years</li>
+              <li>
+                Fitness Swimmer for people of any age who want to improve their
+                overall physical fitness
+              </li>
+            </ul>
           </div>
           <Image
             width={1000}
             height={1000}
             src={aboutImg}
             alt="Services Image"
-            className="xl:w-[548px] h-[464px] rounded-lg mx-auto object-cover"
+            className="flex-1 xl:w-[548px] h-[464px] rounded-lg mx-auto object-cover"
           />
         </div>
+
         <div className="grid xl:grid-cols-2 gap-[168px] xl:gap-6 justify-center">
           {/* card one */}
           <div className="relative lg:w-[588px]">
@@ -60,10 +62,12 @@ const OurServices = () => {
             />
             <div className="absolute right-6 -bottom-[128px] bg-white shadow-customShadowMd rounded-lg grid gap-3 lg:gap-6 p-8 lg:w-[414px]">
               <h2 className="text-[32px] font-bold leading-[38px] text-black">
-                Lifeguarding Services
+                Life Guarding Service
               </h2>
               <p className="text-gray leading-[25px]">
-                Hire our certified lifeguards for safety and peace of mind.
+                At your next social gathering we will provide supervision of
+                your pool so you can entertain without having to worry about the
+                pool. Minimum 3hr booking
               </p>
               <Link
                 className="text-primary font-bold leading-[25px] uppercase flex items-center gap-2"
@@ -84,12 +88,12 @@ const OurServices = () => {
             />
             <div className="absolute right-6 -bottom-[128px] bg-white shadow-customShadowMd rounded-lg grid gap-3 lg:gap-6 p-8 lg:w-[414px]">
               <h2 className="text-[32px] font-bold leading-[38px] text-black">
-                Adult Classes
+                Adult Lean to Swim
               </h2>
               <p className="text-gray leading-[25px]">
-                It&apos;s never too late to learn how to swim. No matter what
-                your age or ability let Poolside Swimming help you become the
-                swimmer you always wanted to be
+                No matter what your age is it’s never too late to learn how to
+                swim. We work with you to help you progress and become a more
+                confident swimmer no matter what level you’re at.
               </p>
               <Link
                 className="text-primary font-bold leading-[25px] uppercase flex items-center gap-2"
