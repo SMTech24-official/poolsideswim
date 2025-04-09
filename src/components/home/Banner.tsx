@@ -23,7 +23,7 @@ const Banner = () => {
             Professional Swimming Lessons designed for all ages and skill
             levels. Swimming Lessons made convenient.
           </p>
-          <SharedButton text="Book Your Lessons" />
+          {/* <SharedButton text="Book Your Lessons" /> */}
         </div>
       </div>
     </div>

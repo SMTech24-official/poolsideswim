@@ -5,6 +5,7 @@ import facebookIcon from "@/assets/footer/facebookIcon.svg";
 import twitterIcon from "@/assets/footer/twitterIcon.svg";
 import instaIcon from "@/assets/footer/instaIcon.svg";
 import youtubeIcon from "@/assets/footer/youtubeIcon.svg";
+import Link from "next/link";
 
 const Footer = () => {
   return (
@@ -32,13 +33,13 @@ const Footer = () => {
                   alt="Facebook Icon"
                   className="w-6 h-6"
                 />
-                <Image
+                {/* <Image
                   width={24}
                   height={24}
                   src={twitterIcon}
                   alt="Twitter Icon"
                   className="w-6 h-6"
-                />
+                /> */}
                 <Image
                   width={24}
                   height={24}
@@ -46,26 +47,28 @@ const Footer = () => {
                   alt="Instagram Icon"
                   className="w-6 h-6"
                 />
-                <Image
+                {/* <Image
                   width={24}
                   height={24}
                   src={youtubeIcon}
                   alt="Youtube Icon"
                   className="w-6 h-6"
-                />
+                /> */}
               </div>
             </div>
           </div>
           <div className="grid lg:flex gap-10 lg:gap-16 items-start">
-            <div className="grid gap-5">
+            {/* <div className="grid gap-5">
               <h2 className="text-yellow text-lg font-semibold leading-7">
                 Main office
               </h2>
               <p className="text-base leading-[25px]">
                 Toronto Pan Am Sports Centre, <br /> Toronto, Ontario, Canada
               </p>
-            </div>
-            <div className="grid gap-[30px]">
+            </div> */}
+
+
+            {/* <div className="grid gap-[30px]">
               <h2 className="text-yellow text-lg font-semibold leading-7">
                 Get Started
               </h2>
@@ -74,15 +77,15 @@ const Footer = () => {
                 <p className="text-base leading-[25px]">Blog</p>
                 <p className="text-base leading-[25px]">Career</p>
               </div>
-            </div>
+            </div> */}
             <div className="grid gap-[30px]">
               <h2 className="text-yellow text-lg font-semibold leading-7">
                 Quick links
               </h2>
               <div className="grid gap-2">
-                <p className="text-base leading-[25px]">About Us</p>
-                <p className="text-base leading-[25px]">Pricing</p>
-                <p className="text-base leading-[25px]">Customer Service</p>
+                <a href="#about-us" className="text-base leading-[25px]">About Us</a>
+                <a href="#course" className="text-base leading-[25px]">Pricing</a>
+                <a href="#red-cross-program" className="text-base leading-[25px]">Customer Service</a>
               </div>
             </div>
           </div>

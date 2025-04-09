@@ -1,7 +1,13 @@
 import About from "@/components/home/About";
+import AdditionalServices from "@/components/home/AdditionalServices";
 import Banner from "@/components/home/Banner";
+import Blog from "@/components/home/Blog";
 import Courses from "@/components/home/Courses";
+import LifeSavingSocietyPrograms from "@/components/home/LifeSavingSocietyPrograms";
+import OurGallery from "@/components/home/OurGallery";
 import OurServices from "@/components/home/OurServices";
+import RedCrossPrograms from "@/components/home/RedCrossPrograms";
+import Testimonial from "@/components/home/Testimonial";
 import WhyChooseUs from "@/components/home/WhyChooseUs";
 import React from "react";
 
@@ -10,12 +16,15 @@ const page = () => {
     <div className="grid gap-[60px] lg:gap-[120px]">
       <Banner />
       <About />
+      <Courses /> 
       <OurServices />
-      <Courses />
       {/* <OurGallery /> */}
       <WhyChooseUs />
       {/* <Blog /> */}
-      {/* <Testimonial /> */}
+      <RedCrossPrograms />
+      <LifeSavingSocietyPrograms />
+      <AdditionalServices />
+      <Testimonial />
     </div>
   );
 };
