@@ -66,15 +66,10 @@
 import Image from "next/image";
 import React, { useState } from "react";
 import shapeIcon from "@/assets/shape.svg";
-import SharedButton from "../shared/SharedButton";
 import Testimonialcard from "../allCards/Testimonialcard";
-import Link from "next/link";
 import { TestimonialData } from "../data/TestimonialData";
-import { usePathname } from "next/navigation";
 
 const Testimonial = () => {
-  const pathname = usePathname();
-  const testimonial = pathname.split("/").pop();
   const [showAll, setShowAll] = useState(false);
 
   // Determine how many testimonials to show

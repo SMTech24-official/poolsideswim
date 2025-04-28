@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -28,13 +29,13 @@ const Courses = () => {
       <SectionHeader
       
         classes="text-center"
-        title="LIfesaving Courses"
+        title="Life Saving Courses"
         subTitle="Bronze medal awards are designed for swimmers who are looking for challenge or beginning the path towards becoming a Lifeguard or Swimming Instructor"
       />
 
       <div className="grid lg:grid-cols-2 xl:grid-cols-3 gap-6 items-start" >
-        {courseData?.map((item: CourseType) => (
-          <CourseCard key={item?.id} item={item} />
+        {courseData?.map((item: CourseType,index) => (
+          <CourseCard key={item?.id} item={item} index={index} />
         ))}
       </div>
     </div>

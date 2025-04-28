@@ -40,6 +40,7 @@ export default {
         gray500: "#667085",
         blue: "#001E2E",
         yellow: "#F0BC3C",
+        blue500: "#4299e1",
       },
       fontFamily: {
         poppins: ["var(--font-poppins)", ...defaultTheme.fontFamily.sans],

@@ -5,19 +5,24 @@ import React from "react";
 import SharedButton from "../shared/SharedButton";
 import { CourseType } from "@/app/types/Program";
 import Link from "next/link";
+import BronzeStarImage from "@/assets/course/bronze-star.webp"
+import BronzeMedallionImage from "@/assets/course/bronze-medallion.webp"
+import BronzeCrossImage from "@/assets/course/bronze-cross.webp"
 
 interface CourseTypesProps {
   item: CourseType;
+  index:number;
 }
+const images = [BronzeStarImage, BronzeMedallionImage, BronzeCrossImage]
 
-const CourseCard = ({ item }: CourseTypesProps) => {
+const CourseCard = ({ item ,index}: CourseTypesProps) => {
   return (
     <div className="md:w-[384px] border rounded-lg border-silver p-5 mx-auto">
       <div className="relative md:w-[344px] h-[320px] mb-4 ">
         <Image
           width={1000}
           height={1000}
-          src={item?.image?.url}
+          src={images[index]}
           alt={item?.image?.altText}
           className="md:w-[344px] h-[320px] object-cover"
         />

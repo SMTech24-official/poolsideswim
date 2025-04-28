@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import React from 'react';
 import lifeSavingSocietyImage from "@/assets/home/life-saving.png";
 import Image from 'next/image';

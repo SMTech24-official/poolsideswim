@@ -1,13 +1,14 @@
+
 [
     {
       "id": "67b9b967f4805ce158a2cdd3",
       "userId": "67b9ab88f5e7468d46a7ca67",
       "daysRange": "Monday - Friday",
       "image": {
-        "url": "http://104.236.194.254:5083/uploads/1740224870794-Bronze Star.png",
-        "altText": "Image for Bronze star"
+        "url": "@/assets/course/bronze-star.webp",
+        "altText": "BronzeStarImage"
       },
-      "price": 250,
+      "price": 350,
       "title": "Bronze Star",
       "description": "Bronze star Ability is the only prerequisite to Bronze Star.  You’ll learn CPR and practice problem-solving and decision-making.",
       "duration": 90,
@@ -22,10 +23,10 @@
       "userId": "67b9ab88f5e7468d46a7ca67",
       "daysRange": "Monday - Friday",
       "image": {
-        "url": "http://104.236.194.254:5083/uploads/1740225054589-Bronze Medallion.png",
-        "altText": "Image for Bronze Medallion"
+        "url": "/public/bronze-medallion.webp",
+        "altText": "BronzeMedallionImage"
       },
-      "price": 560,
+      "price": 550,
       "title": "Bronze Medallion",
       "description": "Ability is the only prerequisite to Bronze Star.  You’ll learn CPR and practice problem-solving and decision-making.",
       "duration": 90,
@@ -40,8 +41,8 @@
       "userId": "67b9ab88f5e7468d46a7ca67",
       "daysRange": "Monday - Friday",
       "image": {
-        "url": "http://104.236.194.254:5083/uploads/1740225208767-Bronze Cross.png",
-        "altText": "Image for Bronze Cross"
+        "url": "/public/bronze-cross.webp",
+        "altText": "BronzeCrossImage"
       },
       "price": 550,
       "title": "Bronze Cross",

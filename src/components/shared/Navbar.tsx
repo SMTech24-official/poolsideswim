@@ -1,234 +1,119 @@
 "use client";
 
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
-import logo from "@/assets/logo.svg";
 import Link from "next/link";
-import SharedButton from "./SharedButton";
-import { useDispatch, useSelector } from "react-redux";
-import { RootState } from "@/redux/rootReducer";
-import { removeUser } from "@/redux/slice/userSlice";
-import { FaChevronDown } from "react-icons/fa6";
-import { useRouter } from "next/navigation";
+import Logo from "../ui/Logo";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [isDropdownOpen, setDropdownOpen] = useState(false);
   const toggleMenu = () => setIsMenuOpen((prev) => !prev);
-  const user = useSelector((state: RootState) => state?.user);
-  const isLoggenIn = !!user?.user?.id;
-  const dispatch = useDispatch();
-  const router = useRouter();
-
-  const handleLogout = () => {
-    dispatch(removeUser()); // Dispatch logout action
-    setDropdownOpen(false); // Close dropdown
-    router.push("/login");
-  };
 
   const handleScroll = () => {
-    if (window.scrollY > 50) {
-      setIsScrolled(true);
-    } else {
-      setIsScrolled(false);
-    }
+    setIsScrolled(window.scrollY > 50);
   };
 
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
-    <div
-      className={`fixed w-full z-10 transition-all duration-300 ease-in-out ${
-        isScrolled ? "bg-primary" : "bg-transparent"
+    <nav
+      className={`fixed w-full z-50 transition-all duration-300 ease-in-out ${
+        isScrolled ? "bg-primary shadow-md" : "bg-transparent"
       }`}
     >
-      <div className="container py-5 flex items-center justify-between">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         {/* Logo */}
-        <Link href="/">
-          <Image
-            width={118}
-            height={48}
-            src={logo}
-            alt="Logo"
-            className="w-[118px] h-[48px]"
-          />
+        <Link href="/" className="z-50">
+          <Logo />
         </Link>
 
         {/* Desktop Navigation Links */}
-        <div className="hidden lg:flex items-center gap-10">
+        <div className="hidden lg:flex items-center gap-8">
           <Link
             href="/"
-            className="text-base font-bold leading-[25px] text-white"
+            className="text-base font-semibold text-white hover:text-blue-200 transition-colors"
           >
             Home
           </Link>
           <Link
             href="/faq"
-            className="text-base font-bold leading-[25px] text-white"
+            className="text-base font-semibold text-white hover:text-blue-200 transition-colors"
           >
             FAQ
           </Link>
-          {/* <Link
-            href="/programs"
-            className="text-base font-bold leading-[25px] text-white"
-          >
-            Programs
-          </Link> */}
-          {/* <Link
-            href="/pricing"
-            className="text-base font-bold leading-[25px] text-white"
-          >
-            Pricing
-          </Link> */}
-          {/* <Link
-            href="/blog"
-            className="text-base font-bold leading-[25px] text-white"
-          >
-            Blog
-          </Link> */}
-          {/* <Link
-            href="/career"
-            className="text-base font-bold leading-[25px] text-white"
-          >
-            Career
-          </Link> */}
           <Link
             href="/contact-us"
-            className="text-base font-bold leading-[25px] text-white"
+            className="text-base font-semibold text-white hover:text-blue-200 transition-colors"
           >
             Contact
           </Link>
         </div>
 
         {/* Mobile Hamburger Menu */}
-        <div className="lg:hidden flex items-center">
-          <button onClick={toggleMenu} className="text-white">
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
+        <button
+          onClick={toggleMenu}
+          className="lg:hidden text-white focus:outline-none z-50"
+          aria-label="Toggle menu"
+        >
+          <svg
+            className="w-6 h-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            {isMenuOpen ? (
               <path
                 strokeLinecap="round"
                 strokeLinejoin="round"
-                strokeWidth="2"
+                strokeWidth={2}
+                d="M6 18L18 6M6 6l12 12"
+              />
+            ) : (
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
                 d="M4 6h16M4 12h16M4 18h16"
               />
-            </svg>
-          </button>
+            )}
+          </svg>
+        </button>
+
+        {/* Mobile Menu */}
+        <div
+          className={`lg:hidden fixed top-0 left-0 w-full h-screen bg-primary transition-all duration-300 ease-in-out flex flex-col items-center justify-center ${
+            isMenuOpen ? "translate-y-0" : "-translate-y-full"
+          }`}
+          style={{ paddingTop: "5rem" }} // Adjust based on your header height
+        >
+          <Link
+            href="/"
+            className="py-4 text-xl font-semibold text-white hover:text-blue-200 transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Home
+          </Link>
+          <Link
+            href="/faq"
+            className="py-4 text-xl font-semibold text-white hover:text-blue-200 transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            FAQ
+          </Link>
+          <Link
+            href="/contact-us"
+            className="py-4 text-xl font-semibold text-white hover:text-blue-200 transition-colors"
+            onClick={() => setIsMenuOpen(false)}
+          >
+            Contact
+          </Link>
         </div>
-        {/* Login Button (always visible) */}
-
-
-        {/* <div>
-          {isLoggenIn ? (
-            <div className="flex items-center gap-4">
-              Display user name
-              <p className="text-white">
-                {user?.user?.firstName} {user?.user?.lastName}
-              </p>
-
-              Icon for dropdown
-              <div className="relative">
-                <FaChevronDown
-                  className="text-white cursor-pointer"
-                  onClick={() => setDropdownOpen(!isDropdownOpen)}
-                />
-                {isDropdownOpen && (
-                  <div className="absolute right-0 bg-white text-black py-2 px-4 mt-2 rounded-md shadow-lg grid gap-2">
-                    <Link
-                      href="/profile"
-                      className="text-black font-medium text-lg"
-                    >
-                      Profile
-                    </Link>
-                    Logout button
-                    <SharedButton
-                      onClick={handleLogout}
-                      classes="w-full text-left text-xs font-medium hover:bg-gray-200 rounded-full px-4 py-1 text-nowrap"
-                      text="Log out"
-                    />
-                  </div>
-                )}
-              </div>
-            </div>
-          ) : (
-             If not logged in, show login button
-            <Link href="/login">
-              <SharedButton
-                classes="bg-white hover:bg-white/95 !text-black py-[9px]"
-                text="Log in"
-              />
-            </Link>
-          )}
-        </div> */}
       </div>
-
-      {/* Mobile Menu (toggle visibility based on state) */}
-      <div
-        className={`lg:hidden ${
-          isMenuOpen ? "block" : "hidden"
-        } bg-primary text-white p-5`}
-      >
-        <Link
-          href="/"
-          className="block py-2 text-base font-bold leading-[25px]"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Home
-        </Link>
-        <Link
-          href="/faq"
-          className="block py-2 text-base font-bold leading-[25px]"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          FAQ
-        </Link>
-        {/* <Link
-          href="/programs"
-          className="block py-2 text-base font-bold leading-[25px]"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Programs
-        </Link> */}
-        {/* <Link
-          href="/pricing"
-          className="block py-2 text-base font-bold leading-[25px]"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Pricing
-        </Link> */}
-        {/* <Link
-          href="/blog"
-          className="block py-2 text-base font-bold leading-[25px]"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Blog
-        </Link> */}
-        {/* <Link
-          href="/career"
-          className="block py-2 text-base font-bold leading-[25px]"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Career
-        </Link> */}
-        <Link
-          href="/contact-us"
-          className="block py-2 text-base font-bold leading-[25px]"
-          onClick={() => setIsMenuOpen(false)}
-        >
-          Contact
-        </Link>
-      </div>
-    </div>
+    </nav>
   );
 };
 
