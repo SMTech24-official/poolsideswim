@@ -32,7 +32,7 @@ const RedCrossPrograms = () => {
             {/* Section Header */}
             <div className="mb-6">
               <h3 className="text-3xl font-bold text-black mb-2">
-                Red Cross Programs
+                Lifesaving Society Swim Programs
               </h3>
               <p className="text-gray-600">
                 Comprehensive swim education for all ages
@@ -41,7 +41,7 @@ const RedCrossPrograms = () => {
 
             {/* Preschool Program */}
             <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-green-600">
-              <h4 className="text-2xl font-semibold text-blue-800 mb-3">
+              {/* <h4 className="text-2xl font-semibold text-blue-800 mb-3">
                 Red Cross Swim Preschool
               </h4>
               <ul className="list-disc pl-6 space-y-2 text-gray-700">
@@ -58,11 +58,20 @@ const RedCrossPrograms = () => {
                   comfortable in the water and learn water safety at an early
                   age
                 </li>
-              </ul>
+              </ul> */}
+              <p>
+                Give your child the confidence to swim! The Lifesaving Society&apos;s
+                6-level Swimmer program helps students 5 and older master the
+                water-whether they&apos;re beginners or building on the basics. And
+                when they&apos;re ready for the next challenge, Canadian Swim Patrol
+                and Bronze medal awards take them further with lifesaving skills
+                designed for ages 8 to 15. Learning to swim has never been this
+                fun and empowering!
+              </p>
             </div>
 
             {/* Kids Program */}
-            <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-cyan-600">
+            {/* <div className="bg-white p-6 rounded-lg shadow-md border-l-4 border-cyan-600">
               <h4 className="text-2xl font-semibold text-blue-800 mb-3">
                 Red Cross Swim Kids
               </h4>
@@ -82,7 +91,7 @@ const RedCrossPrograms = () => {
                   This approach promotes success and encourages lifelong fitness
                 </li>
               </ul>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>
