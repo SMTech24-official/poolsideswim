@@ -2,73 +2,57 @@ export const TestimonialData = [
   {
     id: "1",
     image: "Rectangle 12",
-    content:
-      "So glad Back to Basics has a Facebook page! Thanks for teaching my daughter in her swimming journey. She’s learning swimming competitively, and now she can swim with confidence!",
+    content: "The instructors were amazing with my kids! They made each lesson feel special and tailored to their needs. My shy 4-year-old now loves the water, and my 8-year-old is doing laps confidently. Seeing their progress has been so rewarding.",
     ratings: 5,
-    name: "Liam Carter",
+    name: "Jennifer, a parent of two",
   },
   {
     id: "2",
     image: "Rectangle 12",
-    content:
-      "The personalized attention my son received at Back to Basics really made a difference in his swimming progress. He’s now enjoying swimming lessons more than ever!",
-    ratings: 5,
-    name: "Ava Davis",
+    content: "Having the lessons at my own pool was such a game-changer. It saved me time, and the instructor worked with me to make the most out of the space. My backstroke has never been better, and I feel safer swimming now.",
+    ratings: 4.9,
+    name: "Mark",
   },
   {
     id: "3",
     image: "Rectangle 12",
-    content:
-      "The swim instructors at Back to Basics are truly exceptional! My children always look forward to their swimming lessons because they make it fun and engaging.",
-    ratings: 5,
-    name: "Oliver Smith",
+    content: "We hired lifeguarding services for my daughter's pool party, and it was worth every penny. The lifeguard was super attentive and friendly, letting us all enjoy the day without worrying about safety.",
+    ratings: 4.5,
+    name: "Laura",
   },
   {
     id: "4",
     image: "Rectangle 12",
-    content:
-      "My child’s swimming skills have shown great improvement thanks to the lessons here. We’re excited to continue with the program.",
-    ratings: 4,
-    name: "Trevon",
+    content: "I wanted to learn basic swimming techniques and feel more comfortable in the water. The instructor was patient and kind, adapting the lessons to fit my pace. I'm thrilled with how far I've come in just a few weeks.",
+    ratings: 5,
+    name: "Sophia, a grandmother",
   },
   {
     id: "5",
     image: "Rectangle 12",
-    content:
-      "The personalized attention my son received at Back to Basics really made a difference in his swimming progress. He’s now enjoying swimming lessons more than ever!",
+    content: "I needed to get ready for my lifeguard certification, and the instructor pushed me to refine my techniques. The guidance I received was top-notch—I passed my test with flying colors!",
     ratings: 5,
-    name: "Ava Davis",
+    name: "Ravi, a teenager",
   },
   {
     id: "6",
     image: "Rectangle 12",
-    content:
-      "The swim instructors at Back to Basics made learning to swim so much fun! My kids look forward to their lessons every week.",
-    ratings: 5,
-    name: "Oliver Smith",
+    content: "I was terrified of swimming, but their lessons changed everything. The instructor helped me conquer my fear step by step, and now I feel so empowered in the water.",
+    ratings: 4.9,
+    name: "Emily, Adult first-time swimmer",
   },
   {
     id: "7",
     image: "Rectangle 12",
-    content:
-      "Back to Basics has been instrumental in improving my child's swimming. The coaches are friendly, supportive, and professional!",
-    ratings: 5,
-    name: "Noah Johnson",
+    content: "The advanced techniques I learned here have helped me improve my performance in swim competitions. The instructors are knowledgeable and really know how to challenge you in a good way.",
+    ratings: 4.7,
+    name: "Nathan, Marathon competitor",
   },
   {
     id: "8",
     image: "Rectangle 12",
-    content:
-      "The personalized attention my son received at Back to Basics really made a difference in his swimming progress. He’s now enjoying swimming lessons more than ever!",
+    content: "I loved the flexibility of being able to choose between lessons at their pool or ours. It made it so much easier to fit swimming into our busy schedule, and the kids always looked forward to their lessons.",
     ratings: 5,
-    name: "Ava Davis",
-  },
-  {
-    id: "9",
-    image: "Rectangle 12",
-    content:
-      "The swim instructors at Back to Basics are truly the best. My child enjoys every lesson and has made significant progress.",
-    ratings: 5,
-    name: "Oliver Smith",
-  },
+    name: "Grace, a busy mom",
+  }
 ];

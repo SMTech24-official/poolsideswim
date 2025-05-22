@@ -19,11 +19,12 @@ interface Inputs {
 }
 
 const ContactPage = () => {
-  const [sendContact] = useSendContactMutation();
+  const [sendContact, { isLoading: isContactLoading }] = useSendContactMutation();
   const subject = "contact";
   const {
     register,
     handleSubmit,
+    reset,
     // formState: { errors },
   } = useForm<Inputs>();
   const onSubmit: SubmitHandler<Inputs> = async (data) => {
@@ -33,6 +34,8 @@ const ContactPage = () => {
       if (res?.success) {
         toast.success(res?.message);
       }
+      // reset form after submission
+      reset();
     } catch (error) {
       console.log(error);
     }
@@ -153,7 +156,7 @@ const ContactPage = () => {
             />
           </div>
           <div className="flex justify-end mt-4">
-            <SharedButton text="Submit" type="submit" />
+            <SharedButton isLoading={isContactLoading} text="Submit" type="submit" />
           </div>
         </form>
       </div>
