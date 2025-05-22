@@ -12,6 +12,7 @@ export interface IFormInput {
     confirmPassword: string;
   }
   
+  
   export interface FormDataProps {
     file: File | null;
     reviewerLocation: string;
