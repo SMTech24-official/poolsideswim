@@ -1,57 +1,56 @@
-
 [
-    {
-      "id": "67b9b967f4805ce158a2cdd3",
-      "userId": "67b9ab88f5e7468d46a7ca67",
-      "daysRange": "Monday - Friday",
-      "image": {
-        "url": "@/assets/course/bronze-star.webp",
-        "altText": "BronzeStarImage"
-      },
-      "price": 350,
-      "title": "Bronze Star",
-      "description": "Bronze star Ability is the only prerequisite to Bronze Star.  You’ll learn CPR and practice problem-solving and decision-making.",
-      "duration": 90,
-      "prerequisites": "None (Swim Patrol experience recommended.)",
-      "startTime": "10:00 AM",
-      "sessionTime": "10:00 AM - 11:30 AM",
-      "createdAt": "2025-02-22T11:47:51.648Z",
-      "updatedAt": "2025-02-22T11:47:51.648Z"
+  {
+    "id": "67b9b967f4805ce158a2cdd3",
+    "userId": "67b9ab88f5e7468d46a7ca67",
+    "daysRange": "Monday - Friday",
+    "image": {
+      "url": "@/assets/course/bronze-star.webp",
+      "altText": "BronzeStarImage"
     },
-    {
-      "id": "67b9ba1ff4805ce158a2cdd4",
-      "userId": "67b9ab88f5e7468d46a7ca67",
-      "daysRange": "Monday - Friday",
-      "image": {
-        "url": "/public/bronze-medallion.webp",
-        "altText": "BronzeMedallionImage"
-      },
-      "price": 550,
-      "title": "Bronze Medallion",
-      "description": "Ability is the only prerequisite to Bronze Star.  You’ll learn CPR and practice problem-solving and decision-making.",
-      "duration": 90,
-      "prerequisites": "Minimum 13 years of age or Bronze Star certification (need not be current).",
-      "startTime": "10:00 AM",
-      "sessionTime": "10:00 AM - 11:30 AM",
-      "createdAt": "2025-02-22T11:50:55.685Z",
-      "updatedAt": "2025-02-22T11:50:55.685Z"
+    "price": 350,
+    "title": "Bronze Star",
+    "description": "Bronze star develops swimming proficiency, lifesaving skill and personal fitness. Candidates refine their stroke mechanics, acquire self-rescue skills, and apply fitness principles in training workouts. Bronze Star is excellent preparation for success in Bronze Medallion and provides a fun introduction to lifesaving sport.",
+    "duration": 90,
+    "prerequisites": "None (Swim Patrol experience recommended.)",
+    "startTime": "10:00 AM",
+    "sessionTime": "10:00 AM - 11:30 AM",
+    "createdAt": "2025-02-22T11:47:51.648Z",
+    "updatedAt": "2025-02-22T11:47:51.648Z"
+  },
+  {
+    "id": "67b9ba1ff4805ce158a2cdd4",
+    "userId": "67b9ab88f5e7468d46a7ca67",
+    "daysRange": "Monday - Friday",
+    "image": {
+      "url": "/public/bronze-medallion.webp",
+      "altText": "BronzeMedallionImage"
     },
-    {
-      "id": "67b9bab9f4805ce158a2cdd5",
-      "userId": "67b9ab88f5e7468d46a7ca67",
-      "daysRange": "Monday - Friday",
-      "image": {
-        "url": "/public/bronze-cross.webp",
-        "altText": "BronzeCrossImage"
-      },
-      "price": 550,
-      "title": "Bronze Cross",
-      "description": "Ability is the only prerequisite to Bronze Star.  You’ll learn CPR and practice problem-solving and decision-making.",
-      "duration": 90,
-      "prerequisites": "Bronze Medallion and Lifesaving Society Emergency or Standard First Aid certifications (need not be current) or EFA or SFA from one of these approved agencies. (18 months to 3 years)",
-      "startTime": "10:00 AM",
-      "sessionTime": "10:00 AM - 11:30 AM",
-      "createdAt": "2025-02-22T11:53:29.623Z",
-      "updatedAt": "2025-02-22T11:53:29.623Z"
-    }
-  ]
+    "price": 550,
+    "title": "Bronze Medallion",
+    "description": "Bronze Medallion challenges the candidate both mentally and physically. Judgment, knowledge, skill, and fitness - the four components of water rescue - form the basis of Bronze Medallion training. Candidates acquire the assessment and problem-solving skills needed to make good decisions in, on, and around the water. Bronze Medallion is a prerequisite for assistant lifeguard training in Bronze Cross. ",
+    "duration": 90,
+    "prerequisites": "Minimum 13 years of age or Bronze Star certification (need not be current).",
+    "startTime": "10:00 AM",
+    "sessionTime": "10:00 AM - 11:30 AM",
+    "createdAt": "2025-02-22T11:50:55.685Z",
+    "updatedAt": "2025-02-22T11:50:55.685Z"
+  },
+  {
+    "id": "67b9bab9f4805ce158a2cdd5",
+    "userId": "67b9ab88f5e7468d46a7ca67",
+    "daysRange": "Monday - Friday",
+    "image": {
+      "url": "/public/bronze-cross.webp",
+      "altText": "BronzeCrossImage"
+    },
+    "price": 550,
+    "title": "Bronze Cross",
+    "description": "Bronze Cross begins the transition from lifesaving to lifeguarding and prepares candidates for responsibilities as assistant lifeguards. Candidates strengthen and expand their lifesaving skills and begin to apply the principles and techniques of active surveillance in aquatic facilities. Bronze Cross emphasizes the importance of teamwork and communication in preventing and responding to aquatic emergencies. Bronze Cross is a prerequisite for advanced training in the Society's National Lifeguard and leadership certification programs.",
+    "duration": 90,
+    "prerequisites": "Bronze Medallion and Lifesaving Society Emergency or Standard First Aid certifications (need not be current) or EFA or SFA from one of these approved agencies. (18 months to 3 years)",
+    "startTime": "10:00 AM",
+    "sessionTime": "10:00 AM - 11:30 AM",
+    "createdAt": "2025-02-22T11:53:29.623Z",
+    "updatedAt": "2025-02-22T11:53:29.623Z"
+  }
+]
