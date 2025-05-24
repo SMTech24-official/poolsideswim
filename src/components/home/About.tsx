@@ -61,11 +61,6 @@
 
 // export default About;
 
-
-
-
-
-
 import Image from "next/image";
 import React from "react";
 import aboutImage from "@/assets/aboutImage.png";
@@ -75,7 +70,10 @@ import Link from "next/link";
 
 const About = () => {
   return (
-    <div className="container flex flex-col lg:flex-row items-center gap-6 md:gap-12" id="about-us">
+    <div
+      className="container flex flex-col lg:flex-row items-center gap-6 md:gap-12"
+      id="about-us"
+    >
       <div className="flex-1">
         <Image
           src={aboutImage}
@@ -97,7 +95,7 @@ const About = () => {
               className="rounded-lg"
             />
             <h2 className="text-primary font-bold text-base leading-5 uppercase">
-              About
+              About US
             </h2>
           </div>
           <h2 className="text-[40px] font-bold leading-[48px]">
@@ -105,28 +103,45 @@ const About = () => {
           </h2>
           <ul className="list-disc pl-6 space-y-3 text-gray leading-[25px]">
             <li>
-              <span className="font-semibold">Neighborhood swimming instruction company</span> specializing in Private and Semi-Private Swimming Lessons
+              <span className="font-semibold">
+                Neighborhood swimming instruction company
+              </span>{" "}
+              specializing in Private and Semi-Private Swimming Lessons
             </li>
             <li>
-              <span className="font-semibold">32 years of experience</span> teaching clients from 6 months to 85 years old
+              <span className="font-semibold">32 years of experience</span>{" "}
+              teaching clients from 6 months to 85 years old
             </li>
             <li>
-              Successfully certified <span className="font-semibold">thousands of satisfied customers</span> across Oakville and Burlington
+              Successfully certified{" "}
+              <span className="font-semibold">
+                thousands of satisfied customers
+              </span>{" "}
+              across Oakville and Burlington
             </li>
             <li>
-              Provides <span className="font-semibold">lifeguarding services</span> for summer pool parties
+              Provides{" "}
+              <span className="font-semibold">lifeguarding services</span> for
+              summer pool parties
             </li>
             <li>
-              Professional instructors offer <span className="font-semibold">in-home Private or Semi-Private lessons</span>
+              Professional instructors offer{" "}
+              <span className="font-semibold">
+                in-home Private or Semi-Private lessons
+              </span>
             </li>
             <li>
-              <span className="font-semibold">Local facility available</span> for those without pool access
+              <span className="font-semibold">Local facility available</span>{" "}
+              for those without pool access
             </li>
             <li>
-              <span className="font-semibold">Fully licensed and insured</span> company with certified instructors
+              <span className="font-semibold">Fully licensed and insured</span>{" "}
+              company with certified instructors
             </li>
             <li>
-              Committed to <span className="font-semibold">making swimming fun</span> for all students
+              Committed to{" "}
+              <span className="font-semibold">making swimming fun</span> for all
+              students
             </li>
           </ul>
         </div>

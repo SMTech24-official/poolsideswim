@@ -1,5 +1,5 @@
 import React from "react";
-import redCrosProgramImage from "@/assets/home/red-swim.png";
+import redCrosProgramImage from "@/assets/portrait-woman-swimming-pool.webp";
 import Image from "next/image";
 
 const RedCrossPrograms = () => {
@@ -60,13 +60,13 @@ const RedCrossPrograms = () => {
                 </li>
               </ul> */}
               <p>
-                Give your child the confidence to swim! The Lifesaving Society&apos;s
-                6-level Swimmer program helps students 5 and older master the
-                water-whether they&apos;re beginners or building on the basics. And
-                when they&apos;re ready for the next challenge, Canadian Swim Patrol
-                and Bronze medal awards take them further with lifesaving skills
-                designed for ages 8 to 15. Learning to swim has never been this
-                fun and empowering!
+                Give your child the confidence to swim! The Lifesaving
+                Society&apos;s 6-level Swimmer program helps students 5 and
+                older master the water-whether they&apos;re beginners or
+                building on the basics. And when they&apos;re ready for the next
+                challenge, Canadian Swim Patrol and Bronze medal awards take
+                them further with lifesaving skills designed for ages 8 to 15.
+                Learning to swim has never been this fun and empowering!
               </p>
             </div>
 

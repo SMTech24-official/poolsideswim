@@ -1,8 +1,8 @@
 /* eslint-disable react/no-unescaped-entities */
 import React from "react";
 import SectionHeader from "../shared/SectionHeader";
-import backyardImg from "@/assets/about/backyard.png";
-import leadershipImg from "@/assets/about/leadership.png";
+import backyardImg from "@/assets/mother-with-son-swimming-pool.webp";
+import leadershipImg from "@/assets/boy-swimming-pool.webp";
 import Image from "next/image";
 import Link from "next/link";
 import { FaArrowRight } from "react-icons/fa6";
@@ -12,12 +12,14 @@ const OurServices = () => {
   return (
     <div className="container px-4 sm:px-6 py-10 md:py-16 lg:mb-[128px]">
       {/* section title */}
-      <SectionHeader
-        classes="text-center"
-        title="Our Services"
-        subTitle="Discover our tailored swimming programs for all ages and skill levels. From beginners to advanced swimmers, we help you build confidence and master the water."
-      />
-      
+      <div className="mb-5">
+        <SectionHeader
+          classes="text-center"
+          title="Our Services"
+          subTitle="Discover our tailored swimming programs for all ages and skill levels. From beginners to advanced swimmers, we help you build confidence and master the water."
+        />
+      </div>
+
       <div className="grid gap-10 md:gap-16">
         {/* First Section - Learn to Swim */}
         <div className="flex flex-col lg:flex-row items-center gap-6 xl:gap-10">
@@ -84,7 +86,7 @@ const OurServices = () => {
               </Link>
             </div>
           </div>
-          
+
           {/* Card Two */}
           <div className="relative">
             <div className="w-full aspect-video sm:aspect-[588/400]">
